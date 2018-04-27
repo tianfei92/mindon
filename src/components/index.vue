@@ -130,7 +130,7 @@
             list-style: none;
         }
     }
-    .mindon-index {}
+    
     .header {
         position: fixed;
         width: 100%;
