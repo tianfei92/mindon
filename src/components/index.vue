@@ -2,23 +2,31 @@
     <div class="mindon-index">
         <!--吸顶头部-->
         <div class="header">
-            <div class="info">
-                <a href="" class="logo"></a>
-                <b>成都曼同文化传播有限公司</b>
-                <b class="contact-number">联系电话：13608348361</b>
+            <div class="base-info">
+                <p>
+                    <span class="company-name">成都曼同文化传播有限公司</span>
+                    <span class="contact-number">联系电话：13608348361</span>
+                </p>
             </div>
-            <div class="nav">
-                <a href="" class="index">首页</a>
-                <a href="" class="">案例展示</a>
-                <a href="" class="">关于我们</a>
+            <div class="logo-nav">
+                <div class="logo">
+                    <a href="" class="logo-img"></a>
+                    <a href="" class="logo-des"></a>
+                </div>
+                <div class="nav">
+                    <a href="" class="index">首页</a>
+                    <a href="" class="">案例展示</a>
+                    <a href="" class="">关于我们</a>
+                </div>
             </div>
         </div>
+
         <!--首屏轮播-->
         <div ref="swiper" class="swiper-container">
             <div class="carousel swiper-wrapper">
-                <div class="swiper-slide"><img src="../assets/img/index/1.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="../assets/img/index/1.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="../assets/img/index/1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../assets/img/index/banner.png" alt=""></div>
+                <div class="swiper-slide"><img src="../assets/img/index/banner.png" alt=""></div>
+                <div class="swiper-slide"><img src="../assets/img/index/banner.png" alt=""></div>
             </div>
             <!-- 如果需要分页器 -->
             <div class="swiper-pagination"></div>
@@ -27,25 +35,27 @@
         <!--内容区-->
         <div class="content">
             <!--案例-->
-            <p class="title">案例展示</p>
-            <div class="mindon-index-case" v-for="caseInfo in caseList">
-                <div class="case-list">
-                    <b>{{caseInfo.title}}</b>
-                    <ul class="sort-list">
-                        <li v-for="sort in caseInfo.sortList"><a href="">{{sort}}</a></li>
-                    </ul>
+            <div class="mindon-index-case">
+                <p class="title">案例展示</p>
+                <div class="case-box" v-for="(caseInfo, index) in caseList" :class="{odd: index%2 != 0}">
+                    <div class="case-list">
+                        <b>{{caseInfo.title}}</b>
+                        <ul class="sort-list">
+                            <li v-for="(sort, index) in caseInfo.sortList"><a href="" :class="{first: index === 0}">{{sort}}</a></li>
+                        </ul>
+                    </div>
+                    <a class="case-demo" :class="{first: index===0}" href="" v-for="(caseDetail, index) in caseInfo.detail">
+                        <img :src="caseDetail.imgURL" alt="">
+                        <p>{{caseDetail.caseTitle}}</p>
+                    </a>
                 </div>
-                <a class="case-demo" :class="{first: index===0}" href="" v-for="(caseDetail, index) in caseInfo.detail">
-                    <img :src="caseDetail.imgURL" alt="">
-                    <p>{{caseDetail.caseTitle}}</p>
-                </a>
             </div>
 
             <!--方案文案-->
-            <div class="case-content">
+            <!-- <div class="case-content">
                 <p class="title">方案文案</p>
                 <p></p>
-            </div>
+            </div> -->
 
             <!--关于我们-->
             <div class="about-us">
@@ -54,10 +64,10 @@
             </div>
             <!--餐饮、花链接-->
             <!--关于我们-->
-            <div class="link-details">
+            <!-- <div class="link-details">
                 <p class="title">餐饮链接</p>
                 <p></p>
-            </div>
+            </div> -->
 
             <!--最新资讯-->
             <div class="news">
@@ -156,122 +166,143 @@
         }
     }
     
+    // 头部
     .header {
         position: fixed;
         width: 100%;
-        /*height: 60px;*/
-        line-height: 60px;
         border-bottom: solid 1px #eee;
-        background-color: rgba(255, 255, 255, 0.9);
-        /*background-color: rgba(0, 0, 0, 0.8);*/
+        background-color: #ffffff;
         z-index: 999;
-        /*box-shadow: 1px 1px 3px #eee;*/
         font-size: 0;
         color: #333;
-        /*background: linear-gradient(left, rgba(114, 160, 154, 0.8), rgba(255, 77, 43, 0.95));*/
-        /*background: -moz-linear-gradient(left, rgba(0,0,0,0.8), rgba(0,0,0,0.2));*/
-        /*background: -o-linear-gradient(left, rgba(0,0,0,0.8), rgba(0,0,0,0.2));*/
-        /*background: -webkit-linear-gradient(left, rgba(114, 160, 154, 0.8), rgba(180, 241, 255, 0.95));*/
-        .info {
-            font-size: 20px;
+        .base-info {
+            background-color: #f5f5f5;
+            height: 36px;
+            line-height: 36px;
+            p {
+                width: 1190px;
+                margin: auto;
+                padding-left: 5px;
+                font-size: 14px;
+            }
+            .company-name {
+                color: #888888;
+            }
+            .contact-number {
+                color: #ff6900;
+                margin-left: 50px;
+            }
+        }
+        .logo-nav {
             width: 1190px;
             margin: auto;
-            .logo {
+            padding: 7px 0 15px;
+        }
+
+        .logo {
+            font-size: 20px;
+            display: inline-block;
+            vertical-align: top;
+            .logo-img {
                 display: inline-block;
                 vertical-align: top;
                 width: 80px;
                 height: 60px;
-                margin-right: 10px;
-                background: url("../assets/img/index/logo.png") center no-repeat;
+                background: url("../assets/img/index/logo.png") 0 0 no-repeat;
                 background-size: contain;
             }
-            b {
+            .logo-des {
                 display: inline-block;
                 vertical-align: top;
-                margin-top: 5px;
-            }
-            .contact-number {
-                float: right;
-                color: #ff6900;
+                width: 145px;
+                height: 60px;
+                background: url('../assets/img/index/mindon-logo-des.png') center 20px no-repeat;
+                background-size: contain;
             }
         }
         .nav {
-            width: 1190px;
-            height: 30px;
-            line-height: 30px;
-            margin: auto;
-            .index {
-                color: #0089fd;
-            }
+            float: right;
             a {
                 text-decoration: none;
                 font-size: 18px;
                 color: #6f7180;
                 display: inline-block;
                 vertical-align: top;
-                margin-right: 20px;
-                line-height: 25px;
+                margin-left: 40px;
+                height: 60px;
+                line-height: 80px;
                 &:hover {
                     color: #0089fd;
+                    border-bottom: solid 3px #0089fd;
                 }
+            }
+            a.index {
+                color: #0089fd;
+                border-bottom: solid 3px #0089fd;
             }
         }
     }
     .swiper-container {
-        /*width: 1190px;*/
-        height: 400px;
+        height: 450px;
         margin: auto;
-        padding-top: 95px;
+        padding-top: 120px;
         img {
             width: 100%;
         }
     }
 
-    .content {
-        width: 1190px;
-        margin: 20px auto;
-        padding-top: 60px;
-    }
     /*案例*/
-    .title {
-        font-size: 28px;
-        text-align: center;
-    }
     .mindon-index-case {
         position: relative;
         width: 100%;
-        margin: 15px 0 50px 0;
         overflow: hidden;
         font-size: 0;
         zoom: 1;
+        background-color: #f5f5f5;
+        .title {
+            font-size: 28px;
+            text-align: center;
+        }
+        .case-box {
+            width: 1190px;
+            margin: auto;
+            padding: 0 0 50px 0;
+        }
         .case-list {
             position: relative;
-            margin-top: 10px;
+            margin: 10px 0;
             overflow: hidden;
             zoom: 1;
             b {
                 position: relative;
-                font-size: 30px;
+                height: 20px;
+                line-height: 22px;
+                font-size: 20px;
                 color: #333;
                 display: inline-block;
             }
             .sort-list {
                 display: inline-block;
                 font-size: 14px;
-                float: right;
+                position: absolute;
+                right: 0;
+                top: 0;
                 li {
                     display: inline-block;
-                    padding-left: 10px;
+                    margin-left: 30px;
                     line-height: 18px;
-                    margin-top: 10px;
                     color: #666;
                     a {
                         display: block;
                         text-decoration: none;
-                        color: #666;
+                        color: #333;
+                        &.first {
+                            color: #0089fd;
+                            border-bottom: solid 2px #0089fd;
+                        }
                         &:hover {
                             color: #0089fd;
-                            text-decoration: #409eff;
+                            border-bottom: solid 2px #0089fd;
                         }
                     }
                 }
@@ -341,18 +372,18 @@
         color: #fff;
         width: 100%;
         height: 300px;
-        background-color: rgba(0,0,0,0.7);
-        &:after {
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            content: url("../assets/img/index/1.jpg");
-            z-index: -1;
-        }
+        background-color: #333333;
+        // &:after {
+        //     display: block;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     overflow: hidden;
+        //     content: url("../assets/img/index/banner.png");
+        //     z-index: -1;
+        // }
         .title {
             text-align: center;
             font-size: 28px;
@@ -373,21 +404,22 @@
             }
         }
         .tel-num:before {
-            background: url("../assets/img/index/iPhoneX.png") center no-repeat;
+            background: url("../assets/img/index/footer/iPhoneX.png") center no-repeat;
             background-size: contain;
         }
         .address:before {
-            background: url("../assets/img/index/address.png") center no-repeat;
+            background: url("../assets/img/index/footer/address.png") center no-repeat;
             background-size: contain;
         }
         .email:before {
-            background: url("../assets/img/index/email.png") center no-repeat;
+            background: url("../assets/img/index/footer/email.png") center no-repeat;
             background-size: contain;
         }
     }
 
     .contact-qq {
         position: fixed;
+        z-index: 999;
         width: 60px;
         height: 150px;
         float: right;
