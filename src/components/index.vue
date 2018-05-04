@@ -23,52 +23,68 @@
         </div>
 
         <!--首屏轮播-->
-        <div ref="swiper" class="swiper-container">
-            <div class="carousel swiper-wrapper">
-                <div class="swiper-slide"><img src="../assets/img/index/banner.png" alt=""></div>
-                <div class="swiper-slide"><img src="../assets/img/index/banner.png" alt=""></div>
-                <div class="swiper-slide"><img src="../assets/img/index/banner.png" alt=""></div>
-            </div>
-            <!-- 如果需要分页器 -->
-            <div class="swiper-pagination"></div>
+        <div class="banner">
+            <el-carousel :interval="4000" height="390px">
+                <el-carousel-item v-for="item in 6" :key="item">
+                    <img src="../assets/img/index/banner.png" alt="">
+                </el-carousel-item>
+            </el-carousel>
         </div>
 
-        <div class="base-info">
+
+        <!-- about us -->
+        <div class="about-us">
+            <div class="team">
+                <h3>企业介绍</h3>
+                <h6>Companies to introduce</h6>
+                <el-row>
+                    <el-col :span="8">
+                        <img src="../assets/img/index/about/about_img1.png" alt="">
+                    </el-col>
+                    <el-col :span="16">
+                        <span>成都壹千零壹夜网络科技公司（曾用名：成都科意隆科技有限公司）是一家专注于移动互联网购物服务领域，提供贴心的管家式服务和正合我意的产品的高新技术企业。公司成立于2014年9月1日，位于蜀都中心二期，注册资本1116万元人民币，公司采用合伙人治理架构，已构建起原始创始人、联合创始人及事业伙伴三级并行合作制度。</span>
+                    </el-col>
+                </el-row>
+            </div>
             <div class="to-customers">
-                
-            </div>
-        </div>
-
-        <!--内容区-->
-        <div class="content">
-            <!--案例-->
-            <div class="mindon-index-case">
-                <p class="title">案例展示</p>
-                <div class="case-box" v-for="(caseInfo, index) in caseList" :class="{odd: index%2 != 0}">
-                    <div class="case-list">
-                        <b>{{caseInfo.title}}</b>
-                        <ul class="sort-list">
-                            <li v-for="(sort, index) in caseInfo.sortList"><a href="" :class="{first: index === 0}">{{sort}}</a></li>
-                        </ul>
-                    </div>
-                    <a class="case-demo" :class="{first: index===0}" href="" v-for="(caseDetail, index) in caseInfo.detail">
-                        <img :src="caseDetail.imgURL" alt="">
-                        <p>{{caseDetail.caseTitle}}</p>
-                    </a>
+                <div class="detail">
+                    <h4>企业介绍</h4>
+                    <h5>Companies to introduce</h5>
+                    <el-row>
+                        <el-col :span="16">
+                            <span>成都壹千零壹夜网络科技公司（曾用名：成都科意隆科技有限公司）是一家专注于移动互联网购物服务领域，提供贴心的管家式服务和正合我意的产品的高新技术企业。公司成立于2014年9月1日，位于蜀都中心二期，注册资本1116万元人民币，公司采用合伙人治理架构，已构建起原始创始人、联合创始人及事业伙伴三级并行合作制度。</span>
+                        </el-col>
+                        <el-col :span="8">
+                            <img src="../assets/img/index/about/about_img2.png" alt="">
+                        </el-col>
+                    </el-row>
                 </div>
             </div>
+        </div>
 
-            <!--关于我们-->
-            <div class="about-us">
-                <p class="title">关于我们</p>
-                <p></p>
-            </div>
-
-            <!--最新资讯-->
-            <div class="news">
-                <p class="title">最新资讯</p>
+        <!--案例-->
+        <div class="mindon-index-case">
+            <p class="title">案例展示</p>
+            <div class="case-box" v-for="(caseInfo, index) in caseList" :class="{odd: index%2 != 0}">
+                <div class="case-list">
+                    <b>{{caseInfo.title}}</b>
+                    <ul class="sort-list">
+                        <li v-for="(sort, index) in caseInfo.sortList"><a href="" :class="{first: index === 0}">{{sort}}</a></li>
+                    </ul>
+                </div>
+                <a class="case-demo" :class="{first: index===0}" href="" v-for="(caseDetail, index) in caseInfo.detail">
+                    <img :src="caseDetail.imgURL" alt="">
+                    <p>{{caseDetail.caseTitle}}</p>
+                </a>
             </div>
         </div>
+
+
+        <!--最新资讯-->
+        <div class="news">
+            <p class="title">最新资讯</p>
+        </div>
+
         <!--详细联系方式-->
         <div class="contact-info">
             <p class="title">联系方式</p>
@@ -79,8 +95,9 @@
 
         <!--QQ、二维码导航-->
         <div class="contact-qq">
-            <a href="">QQ</a>
-            <a href="">二维码</a>
+            <a href="javascript: void(0)" class="QQ"></a>
+            <a href="javascript: void(0)" class="QR-code"></a>
+            <a href="javascript: void(0)" class="back-top"></a>
         </div>
     </div>
 </template>
@@ -153,6 +170,7 @@
 <style lang="less" scoped>
     * {
         box-sizing: border-box;
+        font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
     }
     ul {
         margin: auto;
@@ -180,7 +198,7 @@
         .logo-nav {
             width: 1190px;
             margin: auto;
-            padding: 15px 0 15px;
+            // padding: 15px 0 15px;
         }
 
         .logo {
@@ -208,19 +226,61 @@
             float: right;
         }
     }
-    .swiper-container {
+
+    // 轮播
+    .banner {
         height: 450px;
         margin: auto;
-        padding-top: 90px;
+        padding-top: 60px;
         img {
             width: 100%;
         }
     }
 
-    .base-info {
-        background-color: #f5f5f5;
+    /*关于我们*/
+    .about-us {
+        span {
+            line-height: 28px;
+            color: #666;
+            font-size: 14px;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+        .team {
+            width: 1100px;
+            margin: auto;
+            padding: 40px 0;
+            h3, h6 {
+                font-weight: normal;
+                font-size: 28px;
+                margin: 20px auto 15px;
+                color: #444;
+                padding-left: 100px;
+            }
+            h6 {
+                font-size: 18px;
+            }
+        }
         .to-customers {
-            background: url('../assets/img/index/to-user.png') center no-repeat
+            padding: 40px 0;
+            background-color: #fafafa;
+            .detail {
+                width: 1110px;
+                margin: auto;
+                h4, h5 {
+                    font-weight: normal;
+                    font-size: 28px;
+                    margin: 10px auto 15px;
+                    color: #444;
+                    text-align: right;
+                    padding-right: 110px;
+                }
+                h5 {
+                    font-size: 18px;
+                }
+                img {
+                    float: right;
+                }
+            }
         }
     }
 
@@ -249,7 +309,7 @@
             b {
                 position: relative;
                 height: 20px;
-                line-height: 22px;
+                line-height: 20px;
                 font-size: 20px;
                 color: #333;
                 display: inline-block;
@@ -319,14 +379,6 @@
                 text-align: center;
                 font-size: 20px;
             }
-        }
-    }
-
-    /*关于我们*/
-    .about-us {
-        .title {
-            font-size: 28px;
-            text-align: center;
         }
     }
 
@@ -402,18 +454,29 @@
         margin: auto 5px;
         a {
             display: block;
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             text-align: center;
             text-decoration: none;
-            background-color: #3a8ee6;
+            background-color: #333 !important;
             color: #fff;
+            font-size: 12px;
             line-height: 60px;
-            margin-top: 3px;
-            border-radius: 5px;
+            margin-top: 1px;
+            border-radius: 3px;
+            background-size: 45% !important;
             &:hover {
-                background-color: #007aff;
+                background-color: rgb(41, 41, 41) !important;
             }
+        }
+        .QQ {
+            background: url('../assets/img/index/qqContact.png') center no-repeat
+        }
+        .QR-code {
+            background: url('../assets/img/index/phoneContact.png') center no-repeat
+        }
+        .back-top {
+            background: url('../assets/img/index/backToTop.png') center no-repeat
         }
     }
 </style>
