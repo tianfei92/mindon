@@ -2,21 +2,22 @@
     <div class="mindon-index">
         <!--吸顶头部-->
         <div class="header">
-            <div class="base-info">
-                <p>
-                    <span class="company-name">成都曼同文化传播有限公司</span>
-                    <span class="contact-number">联系电话：13608348361</span>
-                </p>
-            </div>
             <div class="logo-nav">
                 <div class="logo">
                     <a href="" class="logo-img"></a>
                     <a href="" class="logo-des"></a>
                 </div>
                 <div class="nav">
-                    <a href="" class="index">首页</a>
-                    <a href="" class="">案例展示</a>
-                    <a href="" class="">关于我们</a>
+                    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" background-color="#333" text-color="#fff" active-text-color="#ffd04b">
+                        <el-menu-item index="1">首页</el-menu-item>
+                        <el-submenu index="2">
+                            <template slot="title">曼.成员</template>
+                            <el-menu-item index="2-1">六十度餐饮</el-menu-item>
+                            <el-menu-item index="2-2">墨饰居</el-menu-item>
+                        </el-submenu>
+                        <el-menu-item index="3">经典案例</el-menu-item>
+                        <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">关于我们</a></el-menu-item>
+                    </el-menu>
                 </div>
             </div>
         </div>
@@ -30,6 +31,12 @@
             </div>
             <!-- 如果需要分页器 -->
             <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="base-info">
+            <div class="to-customers">
+                
+            </div>
         </div>
 
         <!--内容区-->
@@ -51,23 +58,11 @@
                 </div>
             </div>
 
-            <!--方案文案-->
-            <!-- <div class="case-content">
-                <p class="title">方案文案</p>
-                <p></p>
-            </div> -->
-
             <!--关于我们-->
             <div class="about-us">
                 <p class="title">关于我们</p>
                 <p></p>
             </div>
-            <!--餐饮、花链接-->
-            <!--关于我们-->
-            <!-- <div class="link-details">
-                <p class="title">餐饮链接</p>
-                <p></p>
-            </div> -->
 
             <!--最新资讯-->
             <div class="news">
@@ -95,6 +90,7 @@
     export default {
         data: function () {
             return {
+                activeIndex: '1',
                 caseList: [
                     {
                         title: '会务',
@@ -165,38 +161,26 @@
             list-style: none;
         }
     }
+    p {
+        margin: auto;
+    }
+    a {
+        text-decoration: none;
+    }
     
     // 头部
     .header {
         position: fixed;
         width: 100%;
-        border-bottom: solid 1px #eee;
-        background-color: #ffffff;
+        border-bottom: solid 1px #444;
+        background-color: #333;
         z-index: 999;
         font-size: 0;
         color: #333;
-        .base-info {
-            background-color: #f5f5f5;
-            height: 36px;
-            line-height: 36px;
-            p {
-                width: 1190px;
-                margin: auto;
-                padding-left: 5px;
-                font-size: 14px;
-            }
-            .company-name {
-                color: #888888;
-            }
-            .contact-number {
-                color: #ff6900;
-                margin-left: 50px;
-            }
-        }
         .logo-nav {
             width: 1190px;
             margin: auto;
-            padding: 7px 0 15px;
+            padding: 15px 0 15px;
         }
 
         .logo {
@@ -206,7 +190,7 @@
             .logo-img {
                 display: inline-block;
                 vertical-align: top;
-                width: 80px;
+                width: 60px;
                 height: 60px;
                 background: url("../assets/img/index/logo.png") 0 0 no-repeat;
                 background-size: contain;
@@ -222,32 +206,21 @@
         }
         .nav {
             float: right;
-            a {
-                text-decoration: none;
-                font-size: 18px;
-                color: #6f7180;
-                display: inline-block;
-                vertical-align: top;
-                margin-left: 40px;
-                height: 60px;
-                line-height: 80px;
-                &:hover {
-                    color: #0089fd;
-                    border-bottom: solid 3px #0089fd;
-                }
-            }
-            a.index {
-                color: #0089fd;
-                border-bottom: solid 3px #0089fd;
-            }
         }
     }
     .swiper-container {
         height: 450px;
         margin: auto;
-        padding-top: 120px;
+        padding-top: 90px;
         img {
             width: 100%;
+        }
+    }
+
+    .base-info {
+        background-color: #f5f5f5;
+        .to-customers {
+            background: url('../assets/img/index/to-user.png') center no-repeat
         }
     }
 
