@@ -35,24 +35,26 @@
         <!-- about us -->
         <div class="about-us">
             <div class="team">
-                <h3>企业介绍</h3>
+                <h3>关于我们</h3>
                 <h6>Companies to introduce</h6>
                 <el-row>
                     <el-col :span="8">
                         <img src="../assets/img/index/about/about_img1.png" alt="">
                     </el-col>
                     <el-col :span="16">
-                        <span>成都壹千零壹夜网络科技公司（曾用名：成都科意隆科技有限公司）是一家专注于移动互联网购物服务领域，提供贴心的管家式服务和正合我意的产品的高新技术企业。公司成立于2014年9月1日，位于蜀都中心二期，注册资本1116万元人民币，公司采用合伙人治理架构，已构建起原始创始人、联合创始人及事业伙伴三级并行合作制度。</span>
+                        <p>成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司</p>
                     </el-col>
                 </el-row>
             </div>
             <div class="to-customers">
                 <div class="detail">
-                    <h4>企业介绍</h4>
+                    <h4>至亲爱的您</h4>
                     <h5>Companies to introduce</h5>
                     <el-row>
                         <el-col :span="16">
-                            <span>成都壹千零壹夜网络科技公司（曾用名：成都科意隆科技有限公司）是一家专注于移动互联网购物服务领域，提供贴心的管家式服务和正合我意的产品的高新技术企业。公司成立于2014年9月1日，位于蜀都中心二期，注册资本1116万元人民币，公司采用合伙人治理架构，已构建起原始创始人、联合创始人及事业伙伴三级并行合作制度。</span>
+                            <p>谢谢您的停留。我们（企业）的成长过程中，有许多重要时刻希望与我们的朋友家人分享，感恩生命的给予，谢谢一路的帮扶关照支持。未来希望我们仍能携手向前。这些在我们（企业）生命中的特殊时刻，仪式（活动）成了这一刻必不可少部分，让生活充满仪式感，是我们最浪漫的追求。</p>
+                            <p>巧妙的布景，合适的氛围，完美的体验共同组成一场高品质的仪式（活动）。这其中需要策划提供足够的创意支持，需要高素质执行人员提供高标准的服务，需要项目经理对细节的严苛把控。任一环节的缺失都可能带来遗憾。</p>
+                            <p>我们的团队，有从业10年以上伙伴，有刚刚毕业的大学同学，活力、创新、经验三者相互碰撞在我们中间产生了有趣的火花。我们共同的目标是用高于行业的标准来呈现仪式（活动）。</p>
                         </el-col>
                         <el-col :span="8">
                             <img src="../assets/img/index/about/about_img2.png" alt="">
@@ -64,7 +66,7 @@
 
         <!--案例-->
         <div class="mindon-index-case">
-            <p class="title">案例展示</p>
+            <!-- <p class="title">案例展示</p> -->
             <div class="case-box" v-for="(caseInfo, index) in caseList" :class="{odd: index%2 != 0}">
                 <div class="case-list">
                     <b>{{caseInfo.title}}</b>
@@ -82,7 +84,7 @@
 
         <!--最新资讯-->
         <div class="news">
-            <p class="title">最新资讯</p>
+            <!-- <p class="title">最新资讯</p> -->
         </div>
 
         <!--详细联系方式-->
@@ -97,7 +99,7 @@
         <div class="contact-qq">
             <a href="javascript: void(0)" class="QQ"></a>
             <a href="javascript: void(0)" class="QR-code"></a>
-            <a href="javascript: void(0)" class="back-top"></a>
+            <a href="javascript: void(0)" class="back-top" @click="backTop"></a>
         </div>
     </div>
 </template>
@@ -163,6 +165,17 @@
                         el: '.swiper-pagination',
                     }
                 });
+            },
+            backTop: function() {
+                let gotoTop = function() {
+                    let currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+                    let speed = Math.floor(-currentPosition / 6);
+                    if (currentPosition === 0) {
+                        clearInterval(timer)
+                    }
+                    document.documentElement.scrollTop = document.body.scrollTop = currentPosition + speed;
+                };
+                let timer = setInterval(gotoTop, 30);
             }
         }
     }
@@ -239,11 +252,12 @@
 
     /*关于我们*/
     .about-us {
-        span {
+        p {
             line-height: 28px;
             color: #666;
             font-size: 14px;
             font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            text-indent: 2em;
         }
         .team {
             width: 1100px;
@@ -292,6 +306,7 @@
         font-size: 0;
         zoom: 1;
         background-color: #f5f5f5;
+        padding-top: 50px;
         .title {
             font-size: 28px;
             text-align: center;
