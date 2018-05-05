@@ -28,8 +28,8 @@
         <!--首屏轮播-->
         <div class="banner">
             <el-carousel :interval="4000" height="390px">
-                <el-carousel-item v-for="item in 4" :key="item">
-                    <img src="../assets/img/index/banner/banner.png" alt="">
+                <el-carousel-item v-for="(item, index) in bannerList" :key="index">
+                    <img :src="item.imgURL" alt="">
                 </el-carousel-item>
             </el-carousel>
         </div>
@@ -90,6 +90,19 @@
 
         <!-- about us -->
         <div class="about-us">
+            <div class="team">
+                <h3>关于我们</h3>
+                <h6>Companies to introduce</h6>
+                <el-row>
+                    <el-col :span="8">
+                        <img src="../assets/img/index/about/about_img1.png" alt="">
+                    </el-col>
+                    <el-col :span="16">
+                        <p>成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司</p>
+                    </el-col>
+                </el-row>
+            </div>
+
             <div class="to-customers">
                 <div class="detail">
                     <h4>至亲爱的您</h4>
@@ -105,19 +118,6 @@
                         </el-col>
                     </el-row>
                 </div>
-            </div>
-
-            <div class="team">
-                <h3>关于我们</h3>
-                <h6>Companies to introduce</h6>
-                <el-row>
-                    <el-col :span="8">
-                        <img src="../assets/img/index/about/about_img1.png" alt="">
-                    </el-col>
-                    <el-col :span="16">
-                        <p>成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司</p>
-                    </el-col>
-                </el-row>
             </div>
         </div>
 
@@ -150,6 +150,12 @@
         data: function () {
             return {
                 activeIndex: '1',
+                bannerList: [
+                    {imgURL: require('../assets/img/index/banner/banner_1.jpg')},
+                    {imgURL: require('../assets/img/index/banner/banner_2.jpg')},
+                    {imgURL: require('../assets/img/index/banner/banner_3.jpg')},
+                    {imgURL: require('../assets/img/index/banner/banner_4.jpg')}
+                ],
                 caseList: [
                     {
                         title: '会务',
