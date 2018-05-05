@@ -54,6 +54,40 @@
         </div>
 
 
+        <!-- 设备中心 -->
+        <div class="m-device">
+            <div class="floorhd"><div class="grid_c1 floorhd_inner"><h3 class="floorhd_tit">舞美音响</h3></div></div>
+        </div>
+
+        <!-- 摄影摄像 -->
+        <div class="m-photography">
+            <div class="floorhd"><div class="grid_c1 floorhd_inner"><h3 class="floorhd_tit">摄影摄像</h3></div></div>
+            <div class="tips"><p>我公司提供国内A级摄影摄像团队、摄影单反、摄像机、摇臂、航拍机等摄影摄像器材。摄影摄像含后期调色修饰及视频剪辑等。以下图片是本公司演出资源，更多资源请电话联系</p></div>
+            <div class="list">
+                <el-row :gutter="20">
+                    <el-col :span="6"><div class="grid-content"><img src="../assets/img/index/photography/timg-17.png" alt=""><p>单反相机</p></div></el-col>
+                    <el-col :span="6"><div class="grid-content"><img src="../assets/img/index/photography/timg-18.png" alt=""><p>摄像机</p></div></el-col>
+                    <el-col :span="6"><div class="grid-content"><img src="../assets/img/index/photography/timg-19.png" alt=""><p>航拍机</p></div></el-col>
+                    <el-col :span="6"><div class="grid-content"><img src="../assets/img/index/photography/timg-20.png" alt=""><p>摇臂</p></div></el-col>
+                </el-row>
+            </div>
+        </div>
+
+        <!-- 模特礼仪 -->
+        <div class="m-model">
+            <div class="floorhd"><div class="grid_c1 floorhd_inner"><h3 class="floorhd_tit">模特礼仪</h3></div></div>
+            <div class="tips"><p>我公司提供国内A级模特礼仪，国内男模女模、外籍模特、外籍乐队，以下图片是部分我公司演出资源，更多资源请电话联系。</p></div>
+            <div class="list">
+                <el-row :gutter="20">
+                    <el-col :span="6"><div class="grid-content"><img src="../assets/img/index/model/model_1.png" alt=""><p>国内女模</p></div></el-col>
+                    <el-col :span="6"><div class="grid-content"><img src="../assets/img/index/model/model_2.png" alt=""><p>外籍女模</p></div></el-col>
+                    <el-col :span="6"><div class="grid-content"><img src="../assets/img/index/model/model_3.png" alt=""><p>国内男模</p></div></el-col>
+                    <el-col :span="6"><div class="grid-content"><img src="../assets/img/index/model/model_4.png" alt=""><p>外籍乐队</p></div></el-col>
+                </el-row>
+            </div>
+        </div>
+
+
         <!-- about us -->
         <div class="about-us">
             <div class="to-customers">
