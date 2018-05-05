@@ -10,13 +10,16 @@
                 <div class="nav">
                     <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" background-color="#333" text-color="#fff" active-text-color="#ffd04b">
                         <el-menu-item index="1">首页</el-menu-item>
-                        <el-submenu index="2">
+                        <el-menu-item index="2">经典案例</el-menu-item>
+                        <el-menu-item index="3">舞美音响</el-menu-item>
+                        <el-menu-item index="4">摄影摄像</el-menu-item>
+                        <el-menu-item index="5">模特礼仪</el-menu-item>
+                        <el-submenu index="6">
                             <template slot="title">曼.成员</template>
-                            <el-menu-item index="2-1">六十度餐饮</el-menu-item>
-                            <el-menu-item index="2-2">墨饰居</el-menu-item>
+                            <el-menu-item index="6-1">六十度餐饮</el-menu-item>
+                            <el-menu-item index="6-2">墨饰居</el-menu-item>
                         </el-submenu>
-                        <el-menu-item index="3">经典案例</el-menu-item>
-                        <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">关于我们</a></el-menu-item>
+                        <el-menu-item index="7"><a href="https://www.ele.me" target="_blank">关于我们</a></el-menu-item>
                     </el-menu>
                 </div>
             </div>
@@ -25,27 +28,34 @@
         <!--首屏轮播-->
         <div class="banner">
             <el-carousel :interval="4000" height="390px">
-                <el-carousel-item v-for="item in 6" :key="item">
-                    <img src="../assets/img/index/banner.png" alt="">
+                <el-carousel-item v-for="item in 4" :key="item">
+                    <img src="../assets/img/index/banner/banner.png" alt="">
                 </el-carousel-item>
             </el-carousel>
+        </div>
+
+        <!--案例-->
+        <div class="mindon-index-case">
+            <div class="floorhd"><div class="grid_c1 floorhd_inner"><h3 class="floorhd_tit">经典案例</h3></div></div>
+            <div class="case-box" v-for="(caseInfo, index) in caseList" :class="{odd: index%2 != 0}" :key="index">
+                <div class="case-list">
+                    <h5>{{caseInfo.title}}</h5>
+                    <ul class="sort-list">
+                        <li v-for="(sort, index) in caseInfo.sortList" :key="index"><a href="" :class="{first: index === 0}">{{sort}}</a></li>
+                    </ul>
+                </div>
+                <a class="case-demo" :class="{first: index===0}" href="" v-for="(caseDetail, index) in caseInfo.detail" :key="index">
+                    <div class="m-case-pic"><img :src="caseDetail.imgURL" alt=""></div>
+                    <div class="m-case-avart" :style="{background: 'url(' + caseDetail.imgURL + ') center no-repeat'}"></div>
+                    <h6>{{caseDetail.caseTitle}}</h6>
+                    <p>这里是描述这里是描述这里是描述这里是描述这里是描述这里是描述</p>
+                </a>
+            </div>
         </div>
 
 
         <!-- about us -->
         <div class="about-us">
-            <div class="team">
-                <h3>关于我们</h3>
-                <h6>Companies to introduce</h6>
-                <el-row>
-                    <el-col :span="8">
-                        <img src="../assets/img/index/about/about_img1.png" alt="">
-                    </el-col>
-                    <el-col :span="16">
-                        <p>成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司</p>
-                    </el-col>
-                </el-row>
-            </div>
             <div class="to-customers">
                 <div class="detail">
                     <h4>至亲爱的您</h4>
@@ -62,22 +72,18 @@
                     </el-row>
                 </div>
             </div>
-        </div>
 
-        <!--案例-->
-        <div class="mindon-index-case">
-            <!-- <p class="title">案例展示</p> -->
-            <div class="case-box" v-for="(caseInfo, index) in caseList" :class="{odd: index%2 != 0}">
-                <div class="case-list">
-                    <b>{{caseInfo.title}}</b>
-                    <ul class="sort-list">
-                        <li v-for="(sort, index) in caseInfo.sortList"><a href="" :class="{first: index === 0}">{{sort}}</a></li>
-                    </ul>
-                </div>
-                <a class="case-demo" :class="{first: index===0}" href="" v-for="(caseDetail, index) in caseInfo.detail">
-                    <img :src="caseDetail.imgURL" alt="">
-                    <p>{{caseDetail.caseTitle}}</p>
-                </a>
+            <div class="team">
+                <h3>关于我们</h3>
+                <h6>Companies to introduce</h6>
+                <el-row>
+                    <el-col :span="8">
+                        <img src="../assets/img/index/about/about_img1.png" alt="">
+                    </el-col>
+                    <el-col :span="16">
+                        <p>成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司</p>
+                    </el-col>
+                </el-row>
             </div>
         </div>
 
@@ -180,318 +186,4 @@
         }
     }
 </script>
-<style lang="less" scoped>
-    * {
-        box-sizing: border-box;
-        font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
-    }
-    ul {
-        margin: auto;
-        padding: 0;
-        li {
-            list-style: none;
-        }
-    }
-    p {
-        margin: auto;
-    }
-    a {
-        text-decoration: none;
-    }
-    
-    // 头部
-    .header {
-        position: fixed;
-        width: 100%;
-        border-bottom: solid 1px #444;
-        background-color: #333;
-        z-index: 999;
-        font-size: 0;
-        color: #333;
-        .logo-nav {
-            width: 1190px;
-            margin: auto;
-            // padding: 15px 0 15px;
-        }
-
-        .logo {
-            font-size: 20px;
-            display: inline-block;
-            vertical-align: top;
-            .logo-img {
-                display: inline-block;
-                vertical-align: top;
-                width: 60px;
-                height: 60px;
-                background: url("../assets/img/index/logo.png") 0 0 no-repeat;
-                background-size: contain;
-            }
-            .logo-des {
-                display: inline-block;
-                vertical-align: top;
-                width: 145px;
-                height: 60px;
-                background: url('../assets/img/index/mindon-logo-des.png') center 20px no-repeat;
-                background-size: contain;
-            }
-        }
-        .nav {
-            float: right;
-        }
-    }
-
-    // 轮播
-    .banner {
-        height: 450px;
-        margin: auto;
-        padding-top: 60px;
-        img {
-            width: 100%;
-        }
-    }
-
-    /*关于我们*/
-    .about-us {
-        p {
-            line-height: 28px;
-            color: #666;
-            font-size: 14px;
-            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-            text-indent: 2em;
-        }
-        .team {
-            width: 1100px;
-            margin: auto;
-            padding: 40px 0;
-            h3, h6 {
-                font-weight: normal;
-                font-size: 28px;
-                margin: 20px auto 15px;
-                color: #444;
-                padding-left: 100px;
-            }
-            h6 {
-                font-size: 18px;
-            }
-        }
-        .to-customers {
-            padding: 40px 0;
-            background-color: #fafafa;
-            .detail {
-                width: 1110px;
-                margin: auto;
-                h4, h5 {
-                    font-weight: normal;
-                    font-size: 28px;
-                    margin: 10px auto 15px;
-                    color: #444;
-                    text-align: right;
-                    padding-right: 110px;
-                }
-                h5 {
-                    font-size: 18px;
-                }
-                img {
-                    float: right;
-                }
-            }
-        }
-    }
-
-    /*案例*/
-    .mindon-index-case {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        font-size: 0;
-        zoom: 1;
-        background-color: #f5f5f5;
-        padding-top: 50px;
-        .title {
-            font-size: 28px;
-            text-align: center;
-        }
-        .case-box {
-            width: 1190px;
-            margin: auto;
-            padding: 0 0 50px 0;
-        }
-        .case-list {
-            position: relative;
-            margin: 10px 0;
-            overflow: hidden;
-            zoom: 1;
-            b {
-                position: relative;
-                height: 20px;
-                line-height: 20px;
-                font-size: 20px;
-                color: #333;
-                display: inline-block;
-            }
-            .sort-list {
-                display: inline-block;
-                font-size: 14px;
-                position: absolute;
-                right: 0;
-                top: 0;
-                li {
-                    display: inline-block;
-                    margin-left: 30px;
-                    line-height: 18px;
-                    color: #666;
-                    a {
-                        display: block;
-                        text-decoration: none;
-                        color: #333;
-                        &.first {
-                            color: #0089fd;
-                            border-bottom: solid 2px #0089fd;
-                        }
-                        &:hover {
-                            color: #0089fd;
-                            border-bottom: solid 2px #0089fd;
-                        }
-                    }
-                }
-            }
-        }
-
-        .case-demo {
-            display: inline-block;
-            position: relative;
-            vertical-align: top;
-            height: 200px;
-            border: solid 1px #eee;
-            width: 390px;
-            margin: 10px 0 0 10px;
-            background-color: #fff;
-            overflow: hidden;
-            &.first {
-                margin-left: 0;
-            }
-            &:hover {
-                /*border: solid 1px;*/
-                padding: 0;
-                transform: translateY(-2%);
-                transition: all 0.5s;
-                box-shadow: 1px 4px 10px 2px #CCC;
-                -webkit-box-shadow: 1px 4px 10px 2px #CCC;
-                -moz-box-shadow: 1px 4px 10px 2px #CCC;
-            }
-            img {
-                max-width: 100%;
-            }
-            p {
-                position: absolute;
-                bottom: 0;
-                height: 50px;
-                line-height: 50px;
-                width: 100%;
-                margin: auto;
-                background-color: rgba(0, 0, 0, 0.5);
-                color: #fff;
-                text-align: center;
-                font-size: 20px;
-            }
-        }
-    }
-
-    /*最新资讯*/
-    .news {
-        .title {
-            font-size: 28px;
-            text-align: center;
-        }
-    }
-
-    /*联系方式*/
-    .contact-info {
-        padding-top: 30px;
-        position: relative;
-        color: #fff;
-        width: 100%;
-        height: 300px;
-        background-color: #333333;
-        // &:after {
-        //     display: block;
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     overflow: hidden;
-        //     content: url("../assets/img/index/banner.png");
-        //     z-index: -1;
-        // }
-        .title {
-            text-align: center;
-            font-size: 28px;
-        }
-        .tel-num, .address, .email {
-            width: 350px;
-            height: 40px;
-            line-height: 40px;
-            margin: auto;
-            font-size: 18px;
-            &:before {
-                content: '';
-                display: inline-block;
-                vertical-align: middle;
-                width: 20px;
-                height: 20px;
-                margin-right: 10px;
-            }
-        }
-        .tel-num:before {
-            background: url("../assets/img/index/footer/iPhoneX.png") center no-repeat;
-            background-size: contain;
-        }
-        .address:before {
-            background: url("../assets/img/index/footer/address.png") center no-repeat;
-            background-size: contain;
-        }
-        .email:before {
-            background: url("../assets/img/index/footer/email.png") center no-repeat;
-            background-size: contain;
-        }
-    }
-
-    .contact-qq {
-        position: fixed;
-        z-index: 999;
-        width: 60px;
-        height: 150px;
-        float: right;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        margin: auto 5px;
-        a {
-            display: block;
-            width: 50px;
-            height: 50px;
-            text-align: center;
-            text-decoration: none;
-            background-color: #333 !important;
-            color: #fff;
-            font-size: 12px;
-            line-height: 60px;
-            margin-top: 1px;
-            border-radius: 3px;
-            background-size: 45% !important;
-            &:hover {
-                background-color: rgb(41, 41, 41) !important;
-            }
-        }
-        .QQ {
-            background: url('../assets/img/index/qqContact.png') center no-repeat
-        }
-        .QR-code {
-            background: url('../assets/img/index/phoneContact.png') center no-repeat
-        }
-        .back-top {
-            background: url('../assets/img/index/backToTop.png') center no-repeat
-        }
-    }
-</style>
+<style lang="less" scoped src="./index.less"></style>
