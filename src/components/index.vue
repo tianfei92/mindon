@@ -57,6 +57,31 @@
         <!-- 设备中心 -->
         <div class="m-device">
             <div class="floorhd"><div class="grid_c1 floorhd_inner"><h3 class="floorhd_tit">舞美音响</h3></div></div>
+            <div class="list">
+                <el-container>
+                    <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+                        <el-menu :default-openeds="['1']">
+                            <el-submenu index="1">
+                                <template slot="title"><i class="el-icon-service"></i>设备中心</template>
+                                <el-menu-item index="1-1">灯光</el-menu-item>
+                                <el-menu-item index="1-2">音响</el-menu-item>
+                                <el-menu-item index="1-3">屏幕</el-menu-item>
+                                <el-menu-item index="1-4">控制台</el-menu-item>
+                                <el-menu-item index="1-5">其他</el-menu-item>
+                                <el-menu-item index="1-6">舞台背景板</el-menu-item>
+                                <el-menu-item index="1-7">桁架</el-menu-item>
+                            </el-submenu>
+                        </el-menu>
+                    </el-aside>
+                    <el-container>
+                        <el-row :gutter="20" style="width: 100%">
+                            <el-col :span="8"><div class="grid-content"><img src="../assets/img/index/photography/timg-17.png" alt=""><p>单反相机</p></div></el-col>
+                            <el-col :span="8"><div class="grid-content"><img src="../assets/img/index/photography/timg-18.png" alt=""><p>摄像机</p></div></el-col>
+                            <el-col :span="8"><div class="grid-content"><img src="../assets/img/index/photography/timg-19.png" alt=""><p>航拍机</p></div></el-col>
+                        </el-row>
+                    </el-container>
+                </el-container>
+            </div>
         </div>
 
         <!-- 摄影摄像 -->
@@ -119,12 +144,6 @@
                     </el-row>
                 </div>
             </div>
-        </div>
-
-
-        <!--最新资讯-->
-        <div class="news">
-            <!-- <p class="title">最新资讯</p> -->
         </div>
 
         <!--详细联系方式-->
