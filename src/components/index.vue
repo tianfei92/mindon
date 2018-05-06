@@ -9,17 +9,17 @@
                 </div>
                 <div class="nav">
                     <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" background-color="#333" text-color="#fff" active-text-color="#ffd04b">
-                        <el-menu-item index="1">首页</el-menu-item>
-                        <el-menu-item index="2">经典案例</el-menu-item>
-                        <el-menu-item index="3">舞美音响</el-menu-item>
-                        <el-menu-item index="4">摄影摄像</el-menu-item>
-                        <el-menu-item index="5">模特礼仪</el-menu-item>
+                        <el-menu-item index="1" @click="scrollTo('#app')">首页</el-menu-item>
+                        <el-menu-item index="2" @click="scrollTo('#m-case')">经典案例</el-menu-item>
+                        <el-menu-item index="3" @click="scrollTo('#m-device')">舞美音响</el-menu-item>
+                        <el-menu-item index="4" @click="scrollTo('#m-photography')">摄影摄像</el-menu-item>
+                        <el-menu-item index="5" @click="scrollTo('#m-model')">模特礼仪</el-menu-item>
                         <el-submenu index="6">
                             <template slot="title">曼.成员</template>
                             <el-menu-item index="6-1">六十度餐饮</el-menu-item>
                             <el-menu-item index="6-2">墨饰居</el-menu-item>
                         </el-submenu>
-                        <el-menu-item index="7"><a href="https://www.ele.me" target="_blank">关于我们</a></el-menu-item>
+                        <el-menu-item index="7" @click="scrollTo('#m-about-us')">关于我们</el-menu-item>
                     </el-menu>
                 </div>
             </div>
@@ -27,7 +27,7 @@
 
         <!--首屏轮播-->
         <div class="banner">
-            <el-carousel :interval="4000" height="390px">
+            <el-carousel :interval="4000" height="450px">
                 <el-carousel-item v-for="(item, index) in bannerList" :key="index">
                     <img :src="item.imgURL" alt="">
                 </el-carousel-item>
@@ -35,7 +35,7 @@
         </div>
 
         <!--案例-->
-        <div class="mindon-index-case">
+        <div class="mindon-index-case" id="m-case">
             <div class="floorhd"><div class="grid_c1 floorhd_inner"><h3 class="floorhd_tit">经典案例</h3></div></div>
             <div class="case-box" v-for="(caseInfo, index) in caseList" :class="{odd: index%2 != 0}" :key="index">
                 <div class="case-list">
@@ -55,7 +55,7 @@
 
 
         <!-- 设备中心 -->
-        <div class="m-device">
+        <div class="m-device" id="m-device">
             <div class="floorhd"><div class="grid_c1 floorhd_inner"><h3 class="floorhd_tit">舞美音响</h3></div></div>
             <div class="list">
                 <el-container>
@@ -82,7 +82,7 @@
         </div>
 
         <!-- 摄影摄像 -->
-        <div class="m-photography">
+        <div class="m-photography" id="m-photography">
             <div class="floorhd"><div class="grid_c1 floorhd_inner"><h3 class="floorhd_tit">摄影摄像</h3></div></div>
             <div class="tips"><p>我公司提供国内A级摄影摄像团队、摄影单反、摄像机、摇臂、航拍机等摄影摄像器材。摄影摄像含后期调色修饰及视频剪辑等。以下图片是本公司演出资源，更多资源请电话联系</p></div>
             <div class="list">
@@ -96,7 +96,7 @@
         </div>
 
         <!-- 模特礼仪 -->
-        <div class="m-model">
+        <div class="m-model" id="m-model">
             <div class="floorhd"><div class="grid_c1 floorhd_inner"><h3 class="floorhd_tit">模特礼仪</h3></div></div>
             <div class="tips"><p>我公司提供国内A级模特礼仪，国内男模女模、外籍模特、外籍乐队，以下图片是部分我公司演出资源，更多资源请电话联系。</p></div>
             <div class="list">
@@ -111,7 +111,7 @@
 
 
         <!-- about us -->
-        <div class="about-us">
+        <div class="about-us" id="m-about-us">
             <div class="to-customers">
                 <div class="detail">
                     <h4>至亲爱的您</h4>
@@ -143,7 +143,7 @@
         </div>
 
         <!--详细联系方式-->
-        <div class="contact-info">
+        <div class="contact-info" id="m-contact">
             <p class="title">联系方式</p>
             <p class="tel-num">13608348361</p>
             <p class="address">重庆市渝北区两江新区互联网产业园</p>
@@ -154,7 +154,7 @@
         <div class="contact-qq">
             <a href="javascript: void(0)" class="QQ"></a>
             <a href="javascript: void(0)" class="QR-code"></a>
-            <a href="javascript: void(0)" class="back-top" @click="backTop"></a>
+            <a href="javascript: void(0)" class="back-top" @click="scrollTo('#app')"></a>
         </div>
     </div>
 </template>
@@ -258,19 +258,11 @@
                     }
                 });
             },
-            backTop: function() {
-                let gotoTop = function() {
-                    let currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
-                    let speed = Math.floor(-currentPosition / 6);
-                    if (currentPosition === 0) {
-                        clearInterval(timer)
-                    }
-                    document.documentElement.scrollTop = document.body.scrollTop = currentPosition + speed;
-                };
-                let timer = setInterval(gotoTop, 30);
-            },
             handleSelect: function(index, indexPath) {
                 this.deviceShowIndex = Number(index.split('-')[1])
+            },
+            scrollTo: function(ele) {
+                $('html,body').animate({scrollTop:$(ele).offset().top - 60}, 800)
             }
         }
     }
