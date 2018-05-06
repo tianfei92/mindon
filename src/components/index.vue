@@ -159,7 +159,10 @@
             </div>
             <div class="nav">
                 <a href="javascript: void(0)" class="WeChat"></a>
-                <span>QQ：1137333869</span>
+                <div class="m-w">
+                    <img src="../assets/img/index/Wechat.jpeg" alt="">
+                    <span>微信二维码</span>
+                </div>
             </div>
             <div class="nav">
                 <a href="javascript: void(0)" class="QQ"></a>

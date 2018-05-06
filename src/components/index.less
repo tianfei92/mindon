@@ -442,7 +442,7 @@ a {
             width: 170px;
             background-color: #333;
             position: absolute;
-            top: 0;
+            bottom: 0;
             left: -180px;
             opacity: 0;
             &:after {
@@ -458,6 +458,21 @@ a {
                 z-index: 1;
             }
         }
+        .m-w {
+            position: absolute;
+            width: 170px;
+            height: 220px;
+            bottom: 0;
+            left: -180px;
+            opacity: 0;
+            border: solid 1px #333;
+            img {
+                max-width: 100%;
+            }
+            span {
+                left: 0;
+            }
+        }
         &:hover {
             transition: all 0.5s;
             background-color: rgb(196, 0, 0) !important;
@@ -465,6 +480,14 @@ a {
                 left: -170px;
                 opacity: 1;
                 transition: all 0.5s;
+            }
+            .m-w {
+                left: -170px;
+                opacity: 1;
+                transition: all 0.5s;
+                span {
+                    left: 0 !important;
+                }                
             }
         }
     }
