@@ -152,10 +152,22 @@
         </div>
 
         <!--QQ、二维码导航-->
-        <div class="contact-qq">
-            <a href="javascript: void(0)" class="QQ"></a>
-            <a href="javascript: void(0)" class="QR-code"></a>
-            <a href="javascript: void(0)" class="back-top" @click="scrollTo('#app')"></a>
+        <div class="contact-nav">
+            <div class="nav">
+                <a href="javascript: void(0)" class="phone"></a>
+                <span>电话：18008091258</span>
+            </div>
+            <div class="nav">
+                <a href="javascript: void(0)" class="WeChat"></a>
+                <span>QQ：1137333869</span>
+            </div>
+            <div class="nav">
+                <a href="javascript: void(0)" class="QQ"></a>
+                <span>QQ：1137333869</span>
+            </div>
+            <div class="nav no-need">
+                <a href="javascript: void(0)" class="back-top" @click="scrollTo('#app')"></a>
+            </div>
         </div>
     </div>
 </template>
