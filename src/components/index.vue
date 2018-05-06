@@ -112,19 +112,6 @@
 
         <!-- about us -->
         <div class="about-us">
-            <div class="team">
-                <h3>关于我们</h3>
-                <h6>Companies to introduce</h6>
-                <el-row>
-                    <el-col :span="8">
-                        <img src="../assets/img/index/about/about_img1.png" alt="">
-                    </el-col>
-                    <el-col :span="16">
-                        <p>成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司</p>
-                    </el-col>
-                </el-row>
-            </div>
-
             <div class="to-customers">
                 <div class="detail">
                     <h4>至亲爱的您</h4>
@@ -140,6 +127,18 @@
                         </el-col>
                     </el-row>
                 </div>
+            </div>
+            <div class="team">
+                <h3>关于我们</h3>
+                <h6>Companies to introduce</h6>
+                <el-row>
+                    <el-col :span="8">
+                        <img src="../assets/img/index/about/about_img1.png" alt="">
+                    </el-col>
+                    <el-col :span="16">
+                        <p>成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司成都曼同文化传播有限公司</p>
+                    </el-col>
+                </el-row>
             </div>
         </div>
 
