@@ -59,25 +59,22 @@
             <div class="floorhd"><div class="grid_c1 floorhd_inner"><h3 class="floorhd_tit">舞美音响</h3></div></div>
             <div class="list">
                 <el-container>
-                    <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-                        <el-menu :default-openeds="['1']">
+                    <el-aside width="200px">
+                        <el-menu :default-openeds="['1']" :default-active="activeIndex" @select="handleSelect">
                             <el-submenu index="1">
                                 <template slot="title"><i class="el-icon-service"></i>设备中心</template>
-                                <el-menu-item index="1-1">灯光</el-menu-item>
-                                <el-menu-item index="1-2">音响</el-menu-item>
-                                <el-menu-item index="1-3">屏幕</el-menu-item>
-                                <el-menu-item index="1-4">控制台</el-menu-item>
-                                <el-menu-item index="1-5">其他</el-menu-item>
-                                <el-menu-item index="1-6">舞台背景板</el-menu-item>
-                                <el-menu-item index="1-7">桁架</el-menu-item>
+                                <el-menu-item index="1-0">灯光</el-menu-item>
+                                <el-menu-item index="1-1">音响</el-menu-item>
+                                <el-menu-item index="1-2">屏幕</el-menu-item>
+                                <el-menu-item index="1-3">控制台</el-menu-item>
                             </el-submenu>
                         </el-menu>
                     </el-aside>
                     <el-container>
-                        <el-row :gutter="20" style="width: 100%">
-                            <el-col :span="8"><div class="grid-content"><img src="../assets/img/index/photography/timg-17.png" alt=""><p>单反相机</p></div></el-col>
-                            <el-col :span="8"><div class="grid-content"><img src="../assets/img/index/photography/timg-18.png" alt=""><p>摄像机</p></div></el-col>
-                            <el-col :span="8"><div class="grid-content"><img src="../assets/img/index/photography/timg-19.png" alt=""><p>航拍机</p></div></el-col>
+                        <el-row :gutter="20" style="width: 100%" v-for="(deviceList, index) in deviceSortList" :key="index" v-show="deviceShowIndex === index">
+                            <el-col :span="8" v-for="device in deviceList" :key="device.Id">
+                                <div class="grid-content"><img :src="device.imgURL" alt=""><p>{{device.title}}</p></div>
+                            </el-col>
                         </el-row>
                     </el-container>
                 </el-container>
@@ -169,6 +166,7 @@
         data: function () {
             return {
                 activeIndex: '1',
+                deviceShowIndex: 0,
                 bannerList: [
                     {imgURL: require('../assets/img/index/banner/banner_1.jpg')},
                     {imgURL: require('../assets/img/index/banner/banner_2.jpg')},
@@ -212,6 +210,36 @@
                             {imgURL: require('../assets/img/index/party/heijin.jpg'), caseTitle: '黑金饭盒主题轰趴'},
                         ]
                     }
+                ],
+                deviceSortList: [
+                    [
+                        {imgURL: require('../assets/img/index/device/d_1.jpg'), title: '粉色梦幻宝宝宴'},
+                        {imgURL: require('../assets/img/index/device/d_2.jpg'), title: '海洋主题宝宝宴'},
+                        {imgURL: require('../assets/img/index/device/d_3.jpg'), title: '黑金饭盒主题轰趴'},
+                        {imgURL: require('../assets/img/index/device/d_4.jpg'), title: '黑金饭盒主题轰趴'},
+                        {imgURL: require('../assets/img/index/device/d_5.jpg'), title: '黑金饭盒主题轰趴'},
+                        {imgURL: require('../assets/img/index/device/d_6.jpg'), title: '黑金饭盒主题轰趴'},
+                    ],
+                    [
+                        {imgURL: require('../assets/img/index/device/y_1.jpg'), title: '粉色梦幻宝宝宴'},
+                        {imgURL: require('../assets/img/index/device/y_2.jpg'), title: '海洋主题宝宝宴'},
+                        {imgURL: require('../assets/img/index/device/y_3.jpg'), title: '黑金饭盒主题轰趴'},
+                        {imgURL: require('../assets/img/index/device/y_4.jpg'), title: '粉色梦幻宝宝宴'},
+                        {imgURL: require('../assets/img/index/device/y_5.jpg'), title: '海洋主题宝宝宴'},
+                        {imgURL: require('../assets/img/index/device/y_6.jpg'), title: '黑金饭盒主题轰趴'},
+                    ],
+                    [
+                        {imgURL: require('../assets/img/index/device/p_1.jpg'), title: '粉色梦幻宝宝宴'},
+                        {imgURL: require('../assets/img/index/device/p_2.jpg'), title: '海洋主题宝宝宴'},
+                        {imgURL: require('../assets/img/index/device/p_3.jpg'), title: '黑金饭盒主题轰趴'},
+                    ],
+                    [
+                        {imgURL: require('../assets/img/index/device/t_1.jpg'), title: '粉色梦幻宝宝宴'},
+                        {imgURL: require('../assets/img/index/device/t_2.jpg'), title: '海洋主题宝宝宴'},
+                        {imgURL: require('../assets/img/index/device/t_3.jpg'), title: '黑金饭盒主题轰趴'},
+                        {imgURL: require('../assets/img/index/device/t_4.jpg'), title: '黑金饭盒主题轰趴'},
+                        {imgURL: require('../assets/img/index/device/t_5.jpg'), title: '黑金饭盒主题轰趴'},
+                    ]
                 ]
             }
         },
@@ -241,6 +269,9 @@
                     document.documentElement.scrollTop = document.body.scrollTop = currentPosition + speed;
                 };
                 let timer = setInterval(gotoTop, 30);
+            },
+            handleSelect: function(index, indexPath) {
+                this.deviceShowIndex = Number(index.split('-')[1])
             }
         }
     }

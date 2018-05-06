@@ -112,7 +112,7 @@ a {
     overflow: hidden;
     zoom: 1;
     padding: 50px 0;
-    
+    background-color: #fafafa;
     .case-box {
         width: 1190px;
         margin: auto;
@@ -206,10 +206,6 @@ a {
     }
 }
 
-.m-device {
-    background-color: #fafafa;
-}
-
 .m-device, .m-photography, .m-model {
     padding: 50px 0;
     .tips, .list {
@@ -224,6 +220,7 @@ a {
         width: 100%;
         height: 300px;
         text-align: center;
+        color: #303133;
         img {
             display: block;
             max-width: 90%;
@@ -240,14 +237,42 @@ a {
             line-height: 40px;
             bottom: 0;
         }
-        &.active {
-            border: solid 1px;
+        &:hover {
+            transform: translate3d(0,-2px,0);
+            transition: all 0.5s;
+            color: #333;
+            img {
+                transition: all 1s;
+                transform: scale(1.1);
+            }
         }
     }
 }
 
-.m-model {
+.m-device {
+    .el-aside {
+        border-right: solid 1px #e6e6e6;
+        overflow: hidden;
+    }
+    .el-menu {
+        border-right: none;
+    }
+    img {
+        position: relative !important;
+        width: 254px;
+        height: 191px;
+        border: solid 1px #e6e6e6;
+    }
+    p {
+        bottom: 40px !important;
+    }
+}
+
+.m-photography {
     background-color: #fafafa;
+}
+
+.m-model {
     .grid-content {
         height: 420px;
     }
