@@ -29,7 +29,8 @@
         <div class="banner">
             <el-carousel :interval="4000" height="450px">
                 <el-carousel-item v-for="(item, index) in bannerList" :key="index">
-                    <img :src="item.imgURL" alt="">
+                    <!-- <img :src="item.imgURL" alt=""> -->
+                    <div class="banner_img" :style="{background: 'url('+item.imgURL+') center no-repeat'}"></div>
                 </el-carousel-item>
             </el-carousel>
         </div>
