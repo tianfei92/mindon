@@ -158,6 +158,13 @@
                     <p>服务时间：周一至周日 10:00-19:00</p>
                 </div>
             </div>
+            <div class="clearfix">
+                <p class="copyright">
+                    Copyright @ 2006-2017 京ICP备11048047号-3
+                    <br>
+                    曼同（成都）文化传播有限公司 版权所有
+                </p>
+            </div>
         </div>
 
         <!--QQ、二维码导航-->
