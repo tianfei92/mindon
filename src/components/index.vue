@@ -145,17 +145,26 @@
 
         <!--详细联系方式-->
         <div class="contact-info" id="m-contact">
-            <p class="title">联系方式</p>
-            <p class="tel-num">13608348361</p>
-            <p class="address">重庆市渝北区两江新区互联网产业园</p>
-            <p class="email">295418156@qq.com</p>
+            <div class="clearfix">
+                <div class="left">
+                    <h3>成都曼同文化传播有限公司</h3>
+                    <div class="ewm"></div>
+                </div>
+                <div class="right">
+                    <h3>联系方式</h3>
+                    <p class="tel-num">客服电话：180-0809-1258</p>
+                    <p class="email"><a href="mailto:1137333869@qq.com" target="_blank">商务合作：1137333869@qq.com</a></p>
+                    <p class="address">地址：重庆市渝北区两江新区互联网产业园</p>
+                    <p>服务时间：周一至周日 10:00-19:00</p>
+                </div>
+            </div>
         </div>
 
         <!--QQ、二维码导航-->
         <div class="contact-nav">
             <div class="nav">
                 <a href="javascript: void(0)" class="phone"></a>
-                <span>电话：18008091258</span>
+                <span>电话：180-0809-1258</span>
             </div>
             <div class="nav">
                 <a href="javascript: void(0)" class="WeChat"></a>
@@ -174,7 +183,11 @@
         </div>
 
         <div class="footer" :class="{load:pageLoaded === true}">
-            
+            <div class="bottom">
+                <img src="http://sa.easywed.cn/dist/images/officialWebsite-v2.0/homepage/bottom-form-people.png?1570212" alt="" class="people">
+                <div class="m-QQ">1137333869</div>
+                <div class="m-telphone">180-0809-1258</div>
+            </div>
         </div>
     </div>
 </template>
@@ -270,7 +283,7 @@
             let self = this;
             setTimeout(function(){
                 self.pageLoaded = true;
-            }, 1000)
+            }, 2000)
         },
         methods: {
             //首屏轮播
