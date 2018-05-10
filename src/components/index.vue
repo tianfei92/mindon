@@ -153,7 +153,7 @@
                 <div class="right">
                     <h3>联系方式</h3>
                     <p class="tel-num">客服电话：180-0809-1258</p>
-                    <p class="email"><a href="mailto:1137333869@qq.com" target="_blank">商务合作：1137333869@qq.com</a></p>
+                    <p class="email">商务合作：<a href="mailto:1137333869@qq.com" target="_blank">1137333869@qq.com</a></p>
                     <p class="address">地址：重庆市渝北区两江新区互联网产业园</p>
                     <p>服务时间：周一至周日 10:00-19:00</p>
                 </div>
