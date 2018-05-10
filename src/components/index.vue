@@ -42,10 +42,10 @@
                 <div class="case-list">
                     <h5>{{caseInfo.title}}</h5>
                     <ul class="sort-list">
-                        <li v-for="(sort, index) in caseInfo.sortList" :key="index"><a href="" :class="{first: index === 0}">{{sort}}</a></li>
+                        <li v-for="(sort, index) in caseInfo.sortList" :key="index"><a href="/case/detail" :class="{first: index === 0}">{{sort}}</a></li>
                     </ul>
                 </div>
-                <a class="case-demo" :class="{first: index===0}" href="" v-for="(caseDetail, index) in caseInfo.detail" :key="index">
+                <a class="case-demo" :class="{first: index===0}" href="/case/detail" v-for="(caseDetail, index) in caseInfo.detail" :key="index">
                     <div class="m-case-pic"><img :src="caseDetail.imgURL" alt=""></div>
                     <div class="m-case-avart" :style="{background: 'url(' + caseDetail.imgURL + ') center no-repeat'}"></div>
                     <h6>{{caseDetail.caseTitle}}</h6>
@@ -172,6 +172,10 @@
                 <a href="javascript: void(0)" class="back-top" @click="scrollTo('#app')"></a>
             </div>
         </div>
+
+        <div class="footer" :class="{load:pageLoaded === true}">
+            
+        </div>
     </div>
 </template>
 <script>
@@ -182,6 +186,7 @@
             return {
                 activeIndex: '1',
                 deviceShowIndex: 0,
+                pageLoaded: false,
                 bannerList: [
                     {imgURL: require('../assets/img/index/banner/banner_1.jpg')},
                     {imgURL: require('../assets/img/index/banner/banner_2.jpg')},
@@ -260,6 +265,12 @@
         },
         mounted() {
             this.initSwiper();
+        },
+        updated() {
+            let self = this;
+            setTimeout(function(){
+                self.pageLoaded = true;
+            }, 1000)
         },
         methods: {
             //首屏轮播

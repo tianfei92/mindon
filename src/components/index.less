@@ -63,6 +63,7 @@ a {
 
 // 轮播
 .banner {
+    position: relative;
     height: 450px;
     margin: 60px auto 0;
     .banner_img {
@@ -494,4 +495,17 @@ a {
     .nav.no-need:hover {
         background-color: #333 !important;
     }
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.75);
+    bottom: -90px;
+    z-index: 999;
+}
+.footer.load {
+    transition: all 0.5s;
+    bottom: 0;
 }
