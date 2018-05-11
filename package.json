@@ -6,8 +6,8 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config app/build/webpack.dev.conf.js",
-    "start": "npm run dev",
-    "build": "node build/build.js"
+    "start": "node app/server/index.js",
+    "build": "node app/build/build.js"
   },
   "dependencies": {
     "jquery": "^3.3.1",
