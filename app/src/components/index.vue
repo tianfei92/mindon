@@ -4,8 +4,8 @@
         <div class="header">
             <div class="logo-nav">
                 <div class="logo">
-                    <a href="" class="logo-img"></a>
-                    <a href="" class="logo-des"></a>
+                    <a href="/" class="logo-img"></a>
+                    <a href="/" class="logo-des"></a>
                 </div>
                 <div class="nav">
                     <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" background-color="#333" text-color="#fff" active-text-color="#ffd04b">
