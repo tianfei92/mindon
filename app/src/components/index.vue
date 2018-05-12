@@ -7,6 +7,7 @@
                     <a href="/" class="logo-img"></a>
                     <a href="/" class="logo-des"></a>
                 </div>
+                <span class="tel">180-0809-1258</span>  
                 <div class="nav">
                     <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" background-color="#333" text-color="#fff" active-text-color="#ffd04b">
                         <el-menu-item index="1" @click="scrollTo('#app')">首页</el-menu-item>
@@ -153,7 +154,7 @@
         
         <m-footer-vue></m-footer-vue>
 
-        <footerfixed></footerfixed>
+        <!-- <footerfixed></footerfixed> -->
 
         <nav-right></nav-right>
     </div>
@@ -162,12 +163,12 @@
     import Swiper from 'swiper'
     import 'swiper/dist/css/swiper.min.css';
     import mFooterVue from './m-footer';
-    import footerfixed from './m-footer-fixed';
+    // import footerfixed from './m-footer-fixed';
     import navRight from './nav-right'
 
     export default {
         components: {
-            footerfixed,mFooterVue,navRight
+            mFooterVue,navRight
         },
         data: function () {
             return {

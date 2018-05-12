@@ -136,7 +136,7 @@ export default {
   .tel {
     margin-left: 20px;
     float: right;
-    width: 200px;
+    width: 145px;
     height: 60px;
     line-height: 65px;
     font-size: 16px;
@@ -236,7 +236,7 @@ export default {
     width: 320px;
     height: 340px;
     float: left;
-    margin: 0 5px 30px 0;
+    margin: 0 13px 30px 0;
     padding: 7px;
     background-color: #fff;
     border-radius: 3px;

@@ -63,6 +63,25 @@ a {
     .nav {
         float: right;
     }
+    .tel {
+        margin-left: 20px;
+        float: right;
+        width: 145px;
+        height: 60px;
+        line-height: 65px;
+        font-size: 16px;
+        color: #ffffff;
+        &::before {
+          content: "";
+          display: inline-block;
+          vertical-align: sub;
+          margin-right: 5px;
+          width: 20px;
+          height: 20px;
+          background: url("../assets/img/index/phone.png") center no-repeat;
+          background-size: contain;
+        }
+      }
 }
 
 // 轮播
@@ -119,25 +138,25 @@ a {
         }
     }
     .feature_1 {
-        background-color: #488bf3;
+        background-color: #3a3a3a;
         &::before {
             background: url('../assets/img/index/features/feature_1.png') center no-repeat;
         }
     }
     .feature_2 {
-        background-color: #56c193;
+        background-color: #333333;
         &::before {
             background: url('../assets/img/index/features/feature_2.png') center no-repeat;
         }
     }
     .feature_3 {
-        background-color: #9f75ff;
+        background-color: #3a3a3a;
         &::before {
             background: url('../assets/img/index/features/feature_3.png') center no-repeat;
         }
     }
     .feature_4 {
-        background-color: #fe934f;
+        background-color: #333333;
         &::before {
             background: url('../assets/img/index/features/feature_4.png') center no-repeat;
         }
