@@ -142,71 +142,29 @@
                 </el-row>
             </div>
         </div>
+        
+        <m-footer-vue></m-footer-vue>
 
-        <!--详细联系方式-->
-        <div class="contact-info" id="m-contact">
-            <div class="clearfix">
-                <div class="left">
-                    <h3>成都曼同文化传播有限公司</h3>
-                    <div class="ewm"></div>
-                </div>
-                <div class="right">
-                    <h3>联系方式</h3>
-                    <p class="tel-num">客服电话：180-0809-1258</p>
-                    <p class="email">商务合作：<a href="mailto:1137333869@qq.com">1137333869@qq.com</a></p>
-                    <p class="address">地址：重庆市渝北区两江新区互联网产业园</p>
-                    <p>服务时间：周一至周日 10:00-19:00</p>
-                </div>
-            </div>
-            <div class="clearfix copy">
-                <p class="copyright">
-                    Copyright @ 2006-2017 京ICP备11048047号-3
-                    <br>
-                    曼同（成都）文化传播有限公司 版权所有
-                </p>
-            </div>
-        </div>
+        <footerfixed></footerfixed>
 
-        <!--QQ、二维码导航-->
-        <div class="contact-nav">
-            <div class="nav">
-                <a href="javascript: void(0)" class="phone"></a>
-                <span>电话：180-0809-1258</span>
-            </div>
-            <div class="nav">
-                <a href="javascript: void(0)" class="WeChat"></a>
-                <div class="m-w">
-                    <img src="../assets/img/index/wechat.jpeg" alt="">
-                    <span>微信二维码</span>
-                </div>
-            </div>
-            <div class="nav">
-                <a href="javascript: void(0)" class="QQ"></a>
-                <span>QQ：1137333869</span>
-            </div>
-            <div class="nav no-need">
-                <a href="javascript: void(0)" class="back-top" @click="scrollTo('#app')"></a>
-            </div>
-        </div>
-
-        <div class="footer" :class="{load:pageLoaded === true}">
-            <div class="bottom">
-                <img src="http://sa.easywed.cn/dist/images/officialWebsite-v2.0/homepage/bottom-form-people.png?1570212" alt="" class="people">
-                <div class="m-QQ">1137333869</div>
-                <div class="m-telphone">180-0809-1258</div>
-            </div>
-        </div>
+        <nav-right></nav-right>
     </div>
 </template>
 <script>
     import Swiper from 'swiper'
     import 'swiper/dist/css/swiper.min.css';
+    import mFooterVue from './m-footer';
+    import footerfixed from './m-footer-fixed';
+    import navRight from './nav-right'
+
     export default {
+        components: {
+            footerfixed,mFooterVue,navRight
+        },
         data: function () {
             return {
                 activeIndex: '1',
                 deviceShowIndex: 0,
-                pageLoaded: false,
                 bannerList: [
                     {imgURL: require('../assets/img/index/banner/banner_1.jpg')},
                     {imgURL: require('../assets/img/index/banner/banner_2.jpg')},
@@ -285,12 +243,6 @@
         },
         mounted() {
             this.initSwiper();
-        },
-        updated() {
-            let self = this;
-            setTimeout(function(){
-                self.pageLoaded = true;
-            }, 2000)
         },
         methods: {
             //首屏轮播
