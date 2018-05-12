@@ -34,6 +34,14 @@
                 </el-carousel-item>
             </el-carousel>
         </div>
+        <div class="features">
+            <ul class="features-content">
+                <li class="feature_1"><h3>一站式供应商</h3><p>提供策划与餐饮整套解决方案</p></li>
+                <li class="feature_2"><h3>亮点鲜明</h3><p>确保策划活动至少有两个以上亮点</p></li>
+                <li class="feature_3"><h3>精美策划案定制</h3><p>预定即定制方案</p></li>
+                <li class="feature_4"><h3>十年执行经验</h3><p>曼成员拥有十年以上大型活动执行经验</p></li>
+            </ul>
+        </div>
 
         <!--案例-->
         <div class="mindon-index-case" id="m-case">

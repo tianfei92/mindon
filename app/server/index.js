@@ -1,6 +1,5 @@
 // node 后端服务器
 
-const userApi = require('./api/userApi');
 const fs = require('fs');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -10,8 +9,13 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
+app.get('/', (req, res, next) => {
+    next()
+})
 // 后端api路由
-app.use('/api/user', userApi);
+app.get('/admin', (req, res, next) => {
+    res.redirect('https://www.baidu.com/');
+})
 
 // 监听端口
 app.listen(3000);

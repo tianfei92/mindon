@@ -77,6 +77,73 @@ a {
     }
 }
 
+// 特点
+.features {
+    background: #fafafa;
+}
+.features-content {
+    box-sizing: border-box;
+    width: 1190px;
+    margin: auto;
+    font-size: 0;
+    li {
+        position: relative;
+        box-sizing: border-box;
+        display: inline-block;
+        vertical-align: top;
+        width: 295px;
+        height: 109px;
+        border: none;
+        color: #fff;
+        padding-left: 75px;
+        h3, p {
+            display: inline-block;
+            vertical-align: top;
+            width: 220px;
+        }
+        h3 {
+            font-size: 20px;
+            margin: 35px auto 0;
+        }
+        p {
+            font-size: 14px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 75px;
+            height: 100%;
+            background-size: contain;
+        }
+    }
+    .feature_1 {
+        background-color: #488bf3;
+        &::before {
+            background: url('../assets/img/index/features/feature_1.png') center no-repeat;
+        }
+    }
+    .feature_2 {
+        background-color: #56c193;
+        &::before {
+            background: url('../assets/img/index/features/feature_2.png') center no-repeat;
+        }
+    }
+    .feature_3 {
+        background-color: #9f75ff;
+        &::before {
+            background: url('../assets/img/index/features/feature_3.png') center no-repeat;
+        }
+    }
+    .feature_4 {
+        background-color: #fe934f;
+        &::before {
+            background: url('../assets/img/index/features/feature_4.png') center no-repeat;
+        }
+    }
+}
+
 // 楼层title通用样式
 .floorhd {
     height: 65px;
