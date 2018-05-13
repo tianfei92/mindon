@@ -68,7 +68,7 @@ export default {
                     background: url('../assets/img/index/wechat.png') center no-repeat
                 }
                 &.phone {
-                    background: url('../assets/img/index/phoneContact.png') center no-repeat
+                    background: url('../assets/img/index/phone.png') center no-repeat
                 }
                 &.back-top {
                     background: url('../assets/img/index/backToTop.png') center no-repeat
