@@ -16,7 +16,7 @@
         </div>
         <div class="clearfix copy">
             <p class="copyright">
-                Copyright @ 2006-2017 京ICP备11048047号-3
+                Copyright @ 2017-2018 蜀ICP备 18013677号
                 <br>
                 曼同（成都）文化传播有限公司 版权所有
             </p>
