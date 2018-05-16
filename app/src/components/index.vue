@@ -4,8 +4,10 @@
         <div class="header">
             <div class="logo-nav">
                 <div class="logo">
-                    <a href="/" class="logo-img"></a>
-                    <a href="/" class="logo-des"></a>
+                    <router-link to="/" class="logo-img"></router-link>
+                    <router-link to="/" class="logo-des"></router-link>
+                    <!-- <a href="/" class="logo-img"></a>
+                    <a href="/" class="logo-des"></a> -->
                 </div>
                 <span class="tel">180-0809-1258</span>  
                 <div class="nav">
@@ -51,15 +53,21 @@
                 <div class="case-list">
                     <h5>{{caseInfo.title}}</h5>
                     <ul class="sort-list">
-                        <li v-for="(sort, index) in caseInfo.sortList" :key="index"><a href="/case/detail" :class="{first: index === 0}">{{sort}}</a></li>
+                        <li v-for="(sort, index) in caseInfo.sortList" :key="index"><router-link to="/case/detail" :class="{first: index === 0}">{{sort}}</router-link></li>
                     </ul>
                 </div>
-                <a class="case-demo" :class="{first: index===0}" href="/case/detail" v-for="(caseDetail, index) in caseInfo.detail" :key="index">
+                <router-link to="/case/detail" class="case-demo" :class="{first: index===0}" v-for="(caseDetail, index) in caseInfo.detail" :key="index">
                     <div class="m-case-pic"><img :src="caseDetail.imgURL" alt=""></div>
                     <div class="m-case-avart" :style="{background: 'url(' + caseDetail.imgURL + ') center no-repeat'}"></div>
                     <h6>{{caseDetail.caseTitle}}</h6>
                     <p>这里是描述这里是描述这里是描述这里是描述这里是描述这里是描述</p>
-                </a>
+                </router-link>
+                <!-- <a class="case-demo" :class="{first: index===0}" href="/case/detail" v-for="(caseDetail, index) in caseInfo.detail" :key="index">
+                    <div class="m-case-pic"><img :src="caseDetail.imgURL" alt=""></div>
+                    <div class="m-case-avart" :style="{background: 'url(' + caseDetail.imgURL + ') center no-repeat'}"></div>
+                    <h6>{{caseDetail.caseTitle}}</h6>
+                    <p>这里是描述这里是描述这里是描述这里是描述这里是描述这里是描述</p>
+                </a> -->
             </div>
         </div>
 

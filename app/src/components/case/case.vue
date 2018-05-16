@@ -4,8 +4,10 @@
     <div class="header">
       <div class="logo-nav">
         <div class="logo">
-          <a href="" class="logo-img"></a>
-          <a href="" class="logo-des"></a>
+          <router-link to="/" class="logo-img"></router-link>
+          <router-link to="/" class="logo-des"></router-link>
+          <!-- <a href="" class="logo-img"></a>
+          <a href="" class="logo-des"></a> -->
         </div>
           <span class="tel">180-0809-1258</span>        
           <div class="nav">
@@ -26,7 +28,7 @@
     <div class="breadcrumb">
       <el-breadcrumb>
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item><a href="/">案例</a></el-breadcrumb-item>
+        <!-- <el-breadcrumb-item :to="{ path: '/' }">案例</el-breadcrumb-item> -->
         <el-breadcrumb-item>案例详情</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
