@@ -53,14 +53,17 @@
                 <div class="case-list">
                     <h5>{{caseInfo.title}}</h5>
                     <ul class="sort-list">
-                        <li v-for="(sort, index) in caseInfo.sortList" :key="index"><router-link to="/case/detail" :class="{first: index === 0}">{{sort}}</router-link></li>
+                        <li v-for="(sort, index) in caseInfo.sortList" :key="index">
+                            <!-- <router-link to="/case/detail" :class="{first: index === 0}">{{sort}}</router-link> -->
+                            <a href="javascript: void(0)" :class="{first: index === 0}">{{sort}}</a>
+                        </li>
                     </ul>
                 </div>
                 <router-link to="/case/detail" class="case-demo" :class="{first: index===0}" v-for="(caseDetail, index) in caseInfo.detail" :key="index">
                     <div class="m-case-pic"><img :src="caseDetail.imgURL" alt=""></div>
                     <div class="m-case-avart" :style="{background: 'url(' + caseDetail.imgURL + ') center no-repeat'}"></div>
                     <h6>{{caseDetail.caseTitle}}</h6>
-                    <p>这里是描述这里是描述这里是描述这里是描述这里是描述这里是描述</p>
+                    <p>{{caseDetail.caseContent}}</p>
                 </router-link>
                 <!-- <a class="case-demo" :class="{first: index===0}" href="/case/detail" v-for="(caseDetail, index) in caseInfo.detail" :key="index">
                     <div class="m-case-pic"><img :src="caseDetail.imgURL" alt=""></div>
@@ -132,7 +135,7 @@
         <div class="about-us" id="m-about-us">
             <div class="to-customers">
                 <div class="detail">
-                    <h4>至亲爱的您</h4>
+                    <h4>致亲爱的您</h4>
                     <h5>Companies to introduce</h5>
                     <el-row>
                         <el-col :span="16">
@@ -191,69 +194,69 @@
                 caseList: [
                     {
                         title: '会务',
-                        sortList: ['经销商会', '新品发布会', '启动仪式', '答谢会', '年会', '研究会'],
+                        sortList: ['年会', '经销商会', '新品发布会', '启动仪式', '答谢会', '研究会'],
                         detail: [
-                            {imgURL: require('../assets/img/index/huiwu/luhu.jpg'), caseTitle: '路虎新品发布会'},
-                            {imgURL: require('../assets/img/index/huiwu/jipu.jpg'), caseTitle: '吉普新品发布会'},
-                            {imgURL: require('../assets/img/index/huiwu/dema.jpg'), caseTitle: '德玛西亚英雄联盟'},
+                            {imgURL: require('../assets/img/index/huiwu/luhu.jpg'), caseTitle: '路虎新品发布会',caseContent:'路虎新款越野车，整体环境为其设计成硬派的野外的风格'},
+                            {imgURL: require('../assets/img/index/huiwu/jipu.jpg'), caseTitle: '吉普新品发布会',caseContent:'吉普新款主打技术致爱，以科技蓝为主色营造科技革新的氛围'},
+                            {imgURL: require('../assets/img/index/huiwu/dema.jpg'), caseTitle: '德玛西亚英雄联盟',caseContent:'英雄联盟赛以英雄联盟的元素为设计元素，打造了一场英雄的联盟会'},
                         ]
                     },
                     {
                         title: '庆典',
                         sortList: ['开业', '乔迁', '周年庆', '节日'],
                         detail: [
-                            {imgURL: require('../assets/img/index/qingdian/meikemeijia.jpg'), caseTitle: '美克美家开业典礼'},
-                            {imgURL: require('../assets/img/index/qingdian/year.jpg'), caseTitle: '10年之约婚礼'},
-                            {imgURL: require('../assets/img/index/qingdian/zhongshihunli.jpg'), caseTitle: '中式婚礼'},
+                            {imgURL: require('../assets/img/index/qingdian/meikemeijia.jpg'), caseTitle: '美克美家开业典礼',caseContent:'美克美家一直以高端大气的形象出现，开业典礼的主色也是高级灰的配色，简单大方高端'},
+                            {imgURL: require('../assets/img/index/qingdian/year.jpg'), caseTitle: '10年之约婚礼',caseContent:'本场婚礼打造的是一场森系唯美的大型浪漫婚礼'},
+                            {imgURL: require('../assets/img/index/qingdian/zhongshihunli.jpg'), caseTitle: '中式婚礼',caseContent:'本场婚礼打造的是一场传统中式婚礼，以中国传统元素为设计出发点，打造出一场专属于中国的传统婚礼'},
                         ]
                     },
                     {
                         title: '展示展览',
                         sortList: ['糖酒会', '房交会', '车展', '人才交流会'],
                         detail: [
-                            {imgURL: require('../assets/img/index/zszl/xinhua.png'), caseTitle: '新华三展示区'},
-                            {imgURL: require('../assets/img/index/zszl/tjhwc.jpg'), caseTitle: '糖酒会外场'},
-                            {imgURL: require('../assets/img/index/zszl/tjhnc.png'), caseTitle: '糖酒会内场'},
+                            {imgURL: require('../assets/img/index/zszl/xinhua.png'), caseTitle: '新华三展示区',caseContent:'几何形构造出简洁大气的展示环境，屏幕的摆放方式和摆放位置都体现出高端科技的质感'},
+                            {imgURL: require('../assets/img/index/zszl/tjhwc.jpg'), caseTitle: '糖酒会外场',caseContent:'使用大的logo品牌展示墙，简单直接的传达企业文化'},
+                            {imgURL: require('../assets/img/index/zszl/tjhnc.png'), caseTitle: '糖酒会内场',caseContent:'鲜明的黄色与啤酒搭配，展现出活力、激情和个性'},
                         ]
                     },
                     {
                         title: '派对',
                         sortList: ['生日宴', '宝宝宴', '朋友聚会', '时尚轰趴'],
                         detail: [
-                            {imgURL: require('../assets/img/index/party/baobao.jpeg'), caseTitle: '粉色梦幻宝宝宴'},
-                            {imgURL: require('../assets/img/index/party/haiyang.jpg'), caseTitle: '海洋主题宝宝宴'},
-                            {imgURL: require('../assets/img/index/party/heijin.jpg'), caseTitle: '黑金饭盒主题轰趴'},
+                            {imgURL: require('../assets/img/index/party/baobao.jpeg'), caseTitle: '粉色梦幻宝宝宴',caseContent:'本场活动打造的是小女孩粉色梦幻的生日现场，以小孩喜欢的元素打造出梦幻欢乐的生日现场'},
+                            {imgURL: require('../assets/img/index/party/haiyang.jpg'), caseTitle: '海洋主题宝宝宴',caseContent:'本场活动是以海洋元素为设计点，打造出一场蓝色海洋的生日现场'},
+                            {imgURL: require('../assets/img/index/party/heijin.jpg'), caseTitle: '黑金饭盒主题轰趴',caseContent:'黑色和金色都是高贵经典的颜色，打造出一场高贵的朋友聚会'},
                         ]
                     }
                 ],
                 deviceSortList: [
                     [
-                        {imgURL: require('../assets/img/index/device/d_1.jpg'), title: '粉色梦幻宝宝宴'},
-                        {imgURL: require('../assets/img/index/device/d_2.jpg'), title: '海洋主题宝宝宴'},
-                        {imgURL: require('../assets/img/index/device/d_3.jpg'), title: '黑金饭盒主题轰趴'},
-                        {imgURL: require('../assets/img/index/device/d_4.jpg'), title: '黑金饭盒主题轰趴'},
-                        {imgURL: require('../assets/img/index/device/d_5.jpg'), title: '黑金饭盒主题轰趴'},
-                        {imgURL: require('../assets/img/index/device/d_6.jpg'), title: '黑金饭盒主题轰趴'},
+                        {imgURL: require('../assets/img/index/device/d_1.jpg'), title: '光束灯'},
+                        {imgURL: require('../assets/img/index/device/d_2.jpg'), title: '影视面光灯'},
+                        {imgURL: require('../assets/img/index/device/d_3.jpg'), title: '2500W机械追光灯'},
+                        {imgURL: require('../assets/img/index/device/d_4.jpg'), title: '成像灯'},
+                        {imgURL: require('../assets/img/index/device/d_5.jpg'), title: '车展灯'},
+                        {imgURL: require('../assets/img/index/device/d_6.jpg'), title: '追光灯'},
                     ],
                     [
-                        {imgURL: require('../assets/img/index/device/y_1.jpg'), title: '粉色梦幻宝宝宴'},
-                        {imgURL: require('../assets/img/index/device/y_2.jpg'), title: '海洋主题宝宝宴'},
-                        {imgURL: require('../assets/img/index/device/y_3.jpg'), title: '黑金饭盒主题轰趴'},
-                        {imgURL: require('../assets/img/index/device/y_4.jpg'), title: '粉色梦幻宝宝宴'},
-                        {imgURL: require('../assets/img/index/device/y_5.jpg'), title: '海洋主题宝宝宴'},
-                        {imgURL: require('../assets/img/index/device/y_6.jpg'), title: '黑金饭盒主题轰趴'},
+                        {imgURL: require('../assets/img/index/device/y_1.jpg'), title: 'JBL'},
+                        {imgURL: require('../assets/img/index/device/y_2.jpg'), title: '声扬'},
+                        {imgURL: require('../assets/img/index/device/y_3.jpg'), title: 'MEXO音响'},
+                        {imgURL: require('../assets/img/index/device/y_4.jpg'), title: '音响'},
+                        {imgURL: require('../assets/img/index/device/y_5.jpg'), title: '超低音'},
+                        {imgURL: require('../assets/img/index/device/y_6.jpg'), title: '力素'},
                     ],
                     [
-                        {imgURL: require('../assets/img/index/device/p_1.jpg'), title: '粉色梦幻宝宝宴'},
-                        {imgURL: require('../assets/img/index/device/p_2.jpg'), title: '海洋主题宝宝宴'},
-                        {imgURL: require('../assets/img/index/device/p_3.jpg'), title: '黑金饭盒主题轰趴'},
+                        {imgURL: require('../assets/img/index/device/p_1.jpg'), title: '大功率投影机'},
+                        {imgURL: require('../assets/img/index/device/p_2.jpg'), title: '大屏'},
+                        {imgURL: require('../assets/img/index/device/p_3.jpg'), title: 'LED屏幕'},
                     ],
                     [
-                        {imgURL: require('../assets/img/index/device/t_1.jpg'), title: '粉色梦幻宝宝宴'},
-                        {imgURL: require('../assets/img/index/device/t_2.jpg'), title: '海洋主题宝宝宴'},
-                        {imgURL: require('../assets/img/index/device/t_3.jpg'), title: '黑金饭盒主题轰趴'},
-                        {imgURL: require('../assets/img/index/device/t_4.jpg'), title: '黑金饭盒主题轰趴'},
-                        {imgURL: require('../assets/img/index/device/t_5.jpg'), title: '黑金饭盒主题轰趴'},
+                        {imgURL: require('../assets/img/index/device/t_1.jpg'), title: '专业视频切换台'},
+                        {imgURL: require('../assets/img/index/device/t_2.jpg'), title: 'MA1调光台'},
+                        {imgURL: require('../assets/img/index/device/t_3.jpg'), title: '调音台'},
+                        {imgURL: require('../assets/img/index/device/t_4.jpg'), title: '专业视频切换台'},
+                        {imgURL: require('../assets/img/index/device/t_5.jpg'), title: 'MA调光台'},
                     ]
                 ]
             }
