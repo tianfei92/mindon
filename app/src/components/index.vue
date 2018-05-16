@@ -105,7 +105,7 @@
         <!-- 摄影摄像 -->
         <div class="m-photography" id="m-photography">
             <div class="floorhd"><div class="grid_c1 floorhd_inner"><h3 class="floorhd_tit">摄影摄像</h3></div></div>
-            <div class="tips"><p>我公司提供国内A级摄影摄像团队、摄影单反、摄像机、摇臂、航拍机等摄影摄像器材。摄影摄像含后期调色修饰及视频剪辑等。以下图片是本公司演出资源，更多资源请电话联系</p></div>
+            <div class="tips"><p>我公司提供国内A级摄影摄像团队、摄影单反、摄像机、摇臂、航拍机等摄影摄像器材。摄影摄像含后期调色修饰及视频剪辑等。以下图片是本公司演出资源，更多资源请电话联系。</p></div>
             <div class="list">
                 <el-row :gutter="20">
                     <el-col :span="6"><div class="grid-content"><img src="../assets/img/index/photography/timg-17.png" alt=""><p>单反相机</p></div></el-col>
@@ -136,7 +136,7 @@
             <div class="to-customers">
                 <div class="detail">
                     <h4>致亲爱的您</h4>
-                    <h5>Companies to introduce</h5>
+                    <h5>A letter for you</h5>
                     <el-row>
                         <el-col :span="16">
                             <p>谢谢您的停留。我们（企业）的成长过程中，有许多重要时刻希望与我们的朋友家人分享，感恩生命的给予，谢谢一路的帮扶关照支持。未来希望我们仍能携手向前。这些在我们（企业）生命中的特殊时刻，仪式（活动）成了这一刻必不可少部分，让生活充满仪式感，是我们最浪漫的追求。</p>
@@ -151,7 +151,7 @@
             </div>
             <div class="team">
                 <h3>关于我们</h3>
-                <h6>Companies to introduce</h6>
+                <h6>About us</h6>
                 <el-row>
                     <el-col :span="8">
                         <img src="../assets/img/index/about/about_img1.png" alt="">
