@@ -205,7 +205,7 @@
                     },
                     {
                         title: '庆典',
-                        sortList: ['开业', '乔迁', '周年庆', '节日'],
+                        sortList: ['开业', '乔迁', '婚庆', '周年庆', '节日'],
                         detail: [
                             {id:4,imgURL: require('../assets/img/index/qingdian/meikemeijia.jpg'), caseTitle: '美克美家开业典礼',caseContent:'美克美家一直以高端大气的形象出现，开业典礼以白色、灰色、黑色等为主色调突出其高贵的品牌定位。'},
                             {id:5,imgURL: require('../assets/img/index/qingdian/year.jpg'), caseTitle: 'CAWD（中国仓储与配送协会）答谢晚宴',caseContent:'以红色金色作为答谢会主题，烘托喜庆感恩氛围'},
