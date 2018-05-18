@@ -70,7 +70,7 @@
 <script>
 import mFooter from "../m-footer";
 import navRight from "../nav-right";
-import axios from "axios";
+import axios from "@/plugins/axios";
 export default {
   name: "case",
   components: {
@@ -87,11 +87,12 @@ export default {
   },
   methods: {
     getDetail() {
-      axios.get('/api/case/getDetails').then(res => {
-        if(res.success) {
-          console.info(res.data)
+      axios.get("/api/case").then(res => {
+        console.info(JSON.stringify(res))
+        if (res.success) {
+          console.info(res.data);
         }
-      })
+      });
     }
   }
 };
