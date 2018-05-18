@@ -35,7 +35,7 @@
 
     <div class="content">
       <div class="content-left">
-        <img src="../../assets/img/index/huiwu/dema.jpg" alt="" v-for="item in 10" :key="item">
+        <img :src="imgURL" alt="" v-for="imgURL in caseImgList" :key="imgURL">
       </div>
       <div class="content-right">
         <h2>德玛西亚</h2>
@@ -79,18 +79,21 @@ export default {
   },
   data() {
     return {
-      activeIndex: "2"
+      activeIndex: "2",
+      caseImgList: []
     };
   },
   created() {
-    this.getDetail();
+    let caseId = this.$route.query.id;
+    this.getDetail(caseId);
   },
   methods: {
-    getDetail() {
-      axios.get("/api/case").then(res => {
-        console.info(JSON.stringify(res))
+    getDetail(caseId) {
+      axios.post("/api/case", {
+        caseId: caseId
+      }).then(res => {
         if (res.success) {
-          console.info(res.data);
+          this.caseImgList = res.data.caseImgList
         }
       });
     }

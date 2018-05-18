@@ -59,7 +59,7 @@
                         </li>
                     </ul>
                 </div>
-                <router-link to="/case/detail" class="case-demo" :class="{first: index===0}" v-for="(caseDetail, index) in caseInfo.detail" :key="index">
+                <router-link :to="{path: '/case/detail?id=' + caseDetail.id}" class="case-demo" :class="{first: index===0}" v-for="(caseDetail, index) in caseInfo.detail" :key="index">
                     <div class="m-case-pic"><img :src="caseDetail.imgURL" alt=""></div>
                     <div class="m-case-avart" :style="{background: 'url(' + caseDetail.imgURL + ') center no-repeat'}"></div>
                     <h6>{{caseDetail.caseTitle}}</h6>
@@ -198,36 +198,36 @@
                         title: '会务',
                         sortList: ['年会', '经销商会', '新品发布会', '启动仪式', '答谢会', '研究会'],
                         detail: [
-                            {imgURL: require('../assets/img/index/huiwu/luhu.jpg'), caseTitle: '路虎新品发布会',caseContent:'路虎新款越野车，整体环境为其设计成硬派的野外的风格'},
-                            {imgURL: require('../assets/img/index/huiwu/jipu.jpg'), caseTitle: '吉普新品发布会',caseContent:'吉普新款主打技术致爱，以科技蓝为主色营造科技革新的氛围'},
-                            {imgURL: require('../assets/img/index/huiwu/dema.jpg'), caseTitle: '德玛西亚英雄联盟',caseContent:'英雄联盟赛以英雄联盟的元素为设计元素，打造了一场英雄的联盟会'},
+                            {id:1,imgURL: require('../assets/img/index/huiwu/luhu.jpg'), caseTitle: '路虎新品发布会',caseContent:'路虎新款越野车，整体环境为其设计成硬派的野外的风格'},
+                            {id:2,imgURL: require('../assets/img/index/huiwu/jipu.jpg'), caseTitle: '吉普新品发布会',caseContent:'吉普新款主打技术致爱，以科技蓝为主色营造科技革新的氛围'},
+                            {id:3,imgURL: require('../assets/img/index/huiwu/dema.jpg'), caseTitle: '德玛西亚英雄联盟',caseContent:'英雄联盟赛以英雄联盟的元素为设计元素，打造了一场英雄的联盟会'},
                         ]
                     },
                     {
                         title: '庆典',
                         sortList: ['开业', '乔迁', '周年庆', '节日'],
                         detail: [
-                            {imgURL: require('../assets/img/index/qingdian/meikemeijia.jpg'), caseTitle: '美克美家开业典礼',caseContent:'美克美家一直以高端大气的形象出现，开业典礼的主色也是高级灰的配色，简单大方高端'},
-                            {imgURL: require('../assets/img/index/qingdian/year.jpg'), caseTitle: '10年之约婚礼',caseContent:'本场婚礼打造的是一场森系唯美的大型浪漫婚礼'},
-                            {imgURL: require('../assets/img/index/qingdian/zhongshihunli.jpg'), caseTitle: '中式婚礼',caseContent:'本场婚礼打造的是一场传统中式婚礼，以中国传统元素为设计出发点，打造出一场专属于中国的传统婚礼'},
+                            {id:4,imgURL: require('../assets/img/index/qingdian/meikemeijia.jpg'), caseTitle: '美克美家开业典礼',caseContent:'美克美家一直以高端大气的形象出现，开业典礼的主色也是高级灰的配色，简单大方高端'},
+                            {id:5,imgURL: require('../assets/img/index/qingdian/year.jpg'), caseTitle: '10年之约婚礼',caseContent:'本场婚礼打造的是一场森系唯美的大型浪漫婚礼'},
+                            {id:6,imgURL: require('../assets/img/index/qingdian/zhongshihunli.jpg'), caseTitle: '中式婚礼',caseContent:'本场婚礼打造的是一场传统中式婚礼，以中国传统元素为设计出发点，打造出一场专属于中国的传统婚礼'},
                         ]
                     },
                     {
                         title: '展示展览',
                         sortList: ['糖酒会', '房交会', '车展', '人才交流会'],
                         detail: [
-                            {imgURL: require('../assets/img/index/zszl/xinhua.png'), caseTitle: '新华三展示区',caseContent:'几何形构造出简洁大气的展示环境，屏幕的摆放方式和摆放位置都体现出高端科技的质感'},
-                            {imgURL: require('../assets/img/index/zszl/tjhwc.jpg'), caseTitle: '糖酒会外场',caseContent:'使用大的logo品牌展示墙，简单直接的传达企业文化'},
-                            {imgURL: require('../assets/img/index/zszl/tjhnc.png'), caseTitle: '糖酒会内场',caseContent:'鲜明的黄色与啤酒搭配，展现出活力、激情和个性'},
+                            {id:7,imgURL: require('../assets/img/index/zszl/xinhua.png'), caseTitle: '新华三展示区',caseContent:'几何形构造出简洁大气的展示环境，屏幕的摆放方式和摆放位置都体现出高端科技的质感'},
+                            {id:8,imgURL: require('../assets/img/index/zszl/tjhwc.jpg'), caseTitle: '糖酒会外场',caseContent:'使用大的logo品牌展示墙，简单直接的传达企业文化'},
+                            {id:9,imgURL: require('../assets/img/index/zszl/tjhnc.png'), caseTitle: '糖酒会内场',caseContent:'鲜明的黄色与啤酒搭配，展现出活力、激情和个性'},
                         ]
                     },
                     {
                         title: '派对',
                         sortList: ['生日宴', '宝宝宴', '朋友聚会', '时尚轰趴'],
                         detail: [
-                            {imgURL: require('../assets/img/index/party/baobao.jpeg'), caseTitle: '粉色梦幻宝宝宴',caseContent:'本场活动打造的是小女孩粉色梦幻的生日现场，以小孩喜欢的元素打造出梦幻欢乐的生日现场'},
-                            {imgURL: require('../assets/img/index/party/haiyang.jpg'), caseTitle: '海洋主题宝宝宴',caseContent:'本场活动是以海洋元素为设计点，打造出一场蓝色海洋的生日现场'},
-                            {imgURL: require('../assets/img/index/party/heijin.jpg'), caseTitle: '黑金饭盒主题轰趴',caseContent:'黑色和金色都是高贵经典的颜色，打造出一场高贵的朋友聚会'},
+                            {id:10,imgURL: require('../assets/img/index/party/baobao.jpeg'), caseTitle: '粉色梦幻宝宝宴',caseContent:'本场活动打造的是小女孩粉色梦幻的生日现场，以小孩喜欢的元素打造出梦幻欢乐的生日现场'},
+                            {id:11,imgURL: require('../assets/img/index/party/haiyang.jpg'), caseTitle: '海洋主题宝宝宴',caseContent:'本场活动是以海洋元素为设计点，打造出一场蓝色海洋的生日现场'},
+                            {id:12,imgURL: require('../assets/img/index/party/heijin.jpg'), caseTitle: '黑金饭盒主题轰趴',caseContent:'黑色和金色都是高贵经典的颜色，打造出一场高贵的朋友聚会'},
                         ]
                     }
                 ],
