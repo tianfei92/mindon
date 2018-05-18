@@ -70,6 +70,7 @@
 <script>
 import mFooter from "../m-footer";
 import navRight from "../nav-right";
+import axios from "axios";
 export default {
   name: "case",
   components: {
@@ -80,6 +81,18 @@ export default {
     return {
       activeIndex: "2"
     };
+  },
+  created() {
+    this.getDetail();
+  },
+  methods: {
+    getDetail() {
+      axios.get('/api/case/getDetails').then(res => {
+        if(res.success) {
+          console.info(res.data)
+        }
+      })
+    }
   }
 };
 </script>
