@@ -5,12 +5,14 @@
             <div class="left">
                 <h3>成都曼同文化传播有限公司</h3>
                 <div class="ewm"></div>
+                <div class="address"></div>
             </div>
             <div class="right">
                 <h3>联系方式</h3>
                 <p class="tel-num">客服电话：180-0809-1258</p>
                 <p class="email">商务合作：<a href="mailto:286535774@qq.com">286535774@qq.com</a></p>
-                <p class="address">地址：成都市光华村街2号天祥广场1栋2单元1705</p>
+                <p class="address">地址一：成都市光华村街2号天祥广场1栋2单元1705</p>
+                <p class="address">地址二：四川成都武侯区锦绣路1号附24号</p>
                 <p>服务时间：周一至周日 10:00-19:00</p>
             </div>
         </div>
@@ -50,9 +52,17 @@ export default {
                     margin: 10px auto;
                 }
                 .ewm {
-                    width: 120px;
-                    height: 120px;
+                    display: inline-block;
+                    width: 140px;
+                    height: 140px;
                     background: url('../assets/img/index/wechat.jpeg') center no-repeat;
+                    background-size: contain;
+                }
+                .address {
+                    display: inline-block;
+                    width: 400px;
+                    height: 140px;
+                    background: url('../assets/img/index/address.png') center no-repeat;
                     background-size: contain;
                 }
             }
