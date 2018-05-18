@@ -24,5 +24,8 @@ export default new Router({
       name: 'admin',
       component: admin
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })

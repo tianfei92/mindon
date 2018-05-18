@@ -198,18 +198,18 @@
                         title: '会务',
                         sortList: ['年会', '经销商会', '新品发布会', '启动仪式', '答谢会', '研究会'],
                         detail: [
-                            {id:1,imgURL: require('../assets/img/index/huiwu/luhu.jpg'), caseTitle: '路虎新品发布会',caseContent:'路虎新款越野车，整体环境为其设计成硬派的野外的风格'},
-                            {id:2,imgURL: require('../assets/img/index/huiwu/jipu.jpg'), caseTitle: '吉普新品发布会',caseContent:'吉普新款主打技术致爱，以科技蓝为主色营造科技革新的氛围'},
-                            {id:3,imgURL: require('../assets/img/index/huiwu/dema.jpg'), caseTitle: '德玛西亚英雄联盟',caseContent:'英雄联盟赛以英雄联盟的元素为设计元素，打造了一场英雄的联盟会'},
+                            {id:1,imgURL: require('../assets/img/index/huiwu/luhu.jpg'), caseTitle: '路虎新品发布会',caseContent:'以符合捷豹路虎品牌定位的、运动、科技、探险、户外为主基调设计整个方案'},
+                            {id:2,imgURL: require('../assets/img/index/huiwu/jipu.jpg'), caseTitle: '吉普新品发布会',caseContent:'JEEP2018年发布会以科技致爱为主题，以科技蓝为主色营造科技革新的氛围。'},
+                            {id:3,imgURL: require('../assets/img/index/huiwu/dema.jpg'), caseTitle: '德玛西亚英雄联盟',caseContent:'电竞标准场景搭建'},
                         ]
                     },
                     {
                         title: '庆典',
                         sortList: ['开业', '乔迁', '周年庆', '节日'],
                         detail: [
-                            {id:4,imgURL: require('../assets/img/index/qingdian/meikemeijia.jpg'), caseTitle: '美克美家开业典礼',caseContent:'美克美家一直以高端大气的形象出现，开业典礼的主色也是高级灰的配色，简单大方高端'},
-                            {id:5,imgURL: require('../assets/img/index/qingdian/year.jpg'), caseTitle: '10年之约婚礼',caseContent:'本场婚礼打造的是一场森系唯美的大型浪漫婚礼'},
-                            {id:6,imgURL: require('../assets/img/index/qingdian/zhongshihunli.jpg'), caseTitle: '中式婚礼',caseContent:'本场婚礼打造的是一场传统中式婚礼，以中国传统元素为设计出发点，打造出一场专属于中国的传统婚礼'},
+                            {id:4,imgURL: require('../assets/img/index/qingdian/meikemeijia.jpg'), caseTitle: '美克美家开业典礼',caseContent:'美克美家一直以高端大气的形象出现，开业典礼以白色、灰色、黑色等为主色调突出其高贵的品牌定位。'},
+                            {id:5,imgURL: require('../assets/img/index/qingdian/year.jpg'), caseTitle: 'CAWD（中国仓储与配送协会）答谢晚宴',caseContent:'以红色金色作为答谢会主题，烘托喜庆感恩氛围'},
+                            {id:6,imgURL: require('../assets/img/index/qingdian/zhongshihunli.jpg'), caseTitle: '中式婚礼',caseContent:'本场婚礼为中式主题婚礼，中国元素即为本次活动亮点'},
                         ]
                     },
                     {
@@ -225,9 +225,9 @@
                         title: '派对',
                         sortList: ['生日宴', '宝宝宴', '朋友聚会', '时尚轰趴'],
                         detail: [
-                            {id:10,imgURL: require('../assets/img/index/party/baobao.jpeg'), caseTitle: '粉色梦幻宝宝宴',caseContent:'本场活动打造的是小女孩粉色梦幻的生日现场，以小孩喜欢的元素打造出梦幻欢乐的生日现场'},
-                            {id:11,imgURL: require('../assets/img/index/party/haiyang.jpg'), caseTitle: '海洋主题宝宝宴',caseContent:'本场活动是以海洋元素为设计点，打造出一场蓝色海洋的生日现场'},
-                            {id:12,imgURL: require('../assets/img/index/party/heijin.jpg'), caseTitle: '黑金饭盒主题轰趴',caseContent:'黑色和金色都是高贵经典的颜色，打造出一场高贵的朋友聚会'},
+                            {id:10,imgURL: require('../assets/img/index/party/baobao.jpeg'), caseTitle: '粉色梦幻宝宝宴',caseContent:'本场活动营造的是小女孩粉色梦幻的生日派对。'},
+                            {id:11,imgURL: require('../assets/img/index/party/haiyang.jpg'), caseTitle: '海洋主题宝宝宴',caseContent:'本场活动是以海洋元素为设计素材，营造出一场蓝色海洋主题生日派对'},
+                            {id:12,imgURL: require('../assets/img/index/party/heijin.jpg'), caseTitle: '黑金饭盒主题轰趴',caseContent:'黑色和金色都是高贵经典的颜色，两种颜色的搭配打造出一场高贵又冷艳的个性风格的聚会'},
                         ]
                     }
                 ],

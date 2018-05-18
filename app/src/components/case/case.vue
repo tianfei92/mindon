@@ -38,14 +38,14 @@
         <img :src="imgURL" alt="" v-for="imgURL in caseImgList" :key="imgURL">
       </div>
       <div class="content-right">
-        <h2>德玛西亚</h2>
+        <h2>{{caseDetailInfo.title}}</h2>
         <h3>策划灵感</h3>
-        <p>英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟英雄联盟</p>
+        <p>{{caseDetailInfo.inspiration}}</p>
         <h3>基本信息</h3>
         <ul>
-          <li>嘉宾<span>100-150人</span></li>
-          <li>场地<span>成都体育馆</span></li>
-          <li>主题<span>电竞/青春/热血</span></li>
+          <li>嘉宾<span>{{caseDetailInfo.peopleNumbers}}人</span></li>
+          <li>场地<span>{{caseDetailInfo.address}}</span></li>
+          <li>时间<span>{{caseDetailInfo.theme}}</span></li>
         </ul>
       </div>
     </div>
@@ -80,7 +80,8 @@ export default {
   data() {
     return {
       activeIndex: "2",
-      caseImgList: []
+      caseImgList: [],
+      caseDetailInfo: {}
     };
   },
   created() {
@@ -93,7 +94,8 @@ export default {
         caseId: caseId
       }).then(res => {
         if (res.success) {
-          this.caseImgList = res.data.caseImgList
+          this.caseImgList = res.data.caseImgList;
+          this.caseDetailInfo = res.data.caseDetailInfo
         }
       });
     }
