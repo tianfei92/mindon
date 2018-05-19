@@ -51,7 +51,7 @@
     </div>
 
     <!-- 相关案例 -->
-    <div class="correlatioo">
+    <!-- <div class="correlatioo">
       <h3>相关案例推荐</h3>
       <a class="case-demo" :class="{first: index===0}" href="/case/detail" v-for="(caseDetail, index) in 3" :key="index">
         <div class="m-case-pic"><img src="../../assets/img/index/huiwu/dema.jpg" alt=""></div>
@@ -59,7 +59,7 @@
         <h6>德玛西亚</h6>
         <p>这里是描述这里是描述这里是描述这里是描述这里是描述这里是描述</p>
       </a>
-    </div>
+    </div> -->
 
     <m-footer></m-footer>
 

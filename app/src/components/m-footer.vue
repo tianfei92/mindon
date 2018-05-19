@@ -20,7 +20,7 @@
             <p class="copyright">
                 Copyright @ 2017-2018 蜀ICP备 18013677号
                 <br>
-                曼同（成都）文化传播有限公司 版权所有
+                成都曼同文化传播有限公司 版权所有
             </p>
         </div>
     </div>  
@@ -47,7 +47,7 @@ export default {
             padding: 40px 0;
             .left {
                 float: left;
-                margin-left: 10px;
+                // margin-left: 10px;
                 h3 {
                     margin: 10px auto;
                 }

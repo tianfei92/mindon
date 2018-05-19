@@ -39,7 +39,7 @@
         </div>
         <div class="features">
             <ul class="features-content">
-                <li class="feature_1"><h3>一站式服务</h3><p>提供策划与餐饮整套解决方案</p></li>
+                <li class="feature_1"><h3>一站式服务</h3><p>提供场地、策划与餐饮整套解决方案</p></li>
                 <li class="feature_2"><h3>亮点鲜明</h3><p>确保策划活动至少有两个以上亮点</p></li>
                 <li class="feature_3"><h3>精美策划案定制</h3><p>预定即定制方案</p></li>
                 <li class="feature_4"><h3>十年执行经验</h3><p>曼成员拥有十年以上大型活动执行经验</p></li>
@@ -139,12 +139,12 @@
                     <h5>A letter for you</h5>
                     <el-row>
                         <el-col :span="16">
-                            <p>谢谢您的停留。我们（企业）的成长过程中，有许多重要时刻希望与我们的朋友家人分享，感恩生命的给予，谢谢一路的帮扶关照支持。未来希望我们仍能携手向前。这些在我们（企业）生命中的特殊时刻，仪式（活动）成了这一刻必不可少部分，让生活充满仪式感，是我们最浪漫的追求。</p>
+                            <p>谢谢您的停留。我们的成长过程中，有许多重要时刻希望与我们的朋友家人分享，感恩生命的给予，谢谢一路的帮扶关照支持。未来希望我们仍能携手向前。这些在我们生命中的特殊时刻，仪式（活动）成了这一刻必不可少部分，让生活充满仪式感，是我们最浪漫的追求。</p>
                             <p>巧妙的布景，合适的氛围，完美的体验共同组成一场高品质的仪式（活动）。这其中需要策划提供足够的创意支持，需要高素质执行人员提供高标准的服务，需要项目经理对细节的严苛把控。任一环节的缺失都可能带来遗憾。</p>
                             <p>我们的团队，有从业10年以上伙伴，有刚刚毕业的大学同学，活力、创新、经验三者相互碰撞在我们中间产生了有趣的火花。我们共同的目标是用高于行业的标准来呈现仪式（活动）。</p>
                         </el-col>
                         <el-col :span="8">
-                            <img src="../assets/img/index/about/about_img2.png" alt="">
+                            <img src="../assets/img/index/about/about_img2.jpg" alt="">
                         </el-col>
                     </el-row>
                 </div>
@@ -154,7 +154,7 @@
                 <h6>About us</h6>
                 <el-row>
                     <el-col :span="8">
-                        <img src="../assets/img/index/about/about_img1.png" alt="">
+                        <img src="../assets/img/index/about/about_img1.jpg" alt="">
                     </el-col>
                     <el-col :span="16">
                         <p>Mindon曼·策划，独立于六十度餐饮策划部。随着市场需求连年增长，六十度业务不断发展，对于高端策划的需求越发强烈，策划部已经不能满足对于高品质策划的需求，2017年，创始人团队联合六十度以合伙制形式，组建全新策划品牌Mindon曼·策划，团队拥有10年的大型活动策划执行经验，同时也吸纳了高素质年轻一代策划师，定位于各类高端活动策划。团队整体策划水平，创新意识深受精英客户群好评</p>
@@ -198,16 +198,16 @@
                         title: '会务',
                         sortList: ['年会', '经销商会', '新品发布会', '启动仪式', '答谢会', '研究会'],
                         detail: [
-                            {id:1,imgURL: require('../assets/img/index/huiwu/luhu.jpg'), caseTitle: '路虎新品发布会',caseContent:'以符合捷豹路虎品牌定位的、运动、科技、探险、户外为主基调设计整个方案'},
-                            {id:2,imgURL: require('../assets/img/index/huiwu/jipu.jpg'), caseTitle: '吉普新品发布会',caseContent:'JEEP2018年发布会以科技致爱为主题，以科技蓝为主色营造科技革新的氛围。'},
-                            {id:3,imgURL: require('../assets/img/index/huiwu/dema.jpg'), caseTitle: '德玛西亚英雄联盟',caseContent:'电竞标准场景搭建'},
+                            {id:1,imgURL: require('../assets/img/index/huiwu/luhu.jpg'), caseTitle: '捷豹路虎春季发布会',caseContent:'以符合捷豹路虎品牌定位的、运动、科技、探险、户外为主基调设计整个方案'},
+                            {id:2,imgURL: require('../assets/img/index/huiwu/jipu.jpg'), caseTitle: 'JEEP新车发布会',caseContent:'JEEP2018年发布会以科技致爱为主题，以科技蓝为主色营造科技革新的氛围。'},
+                            {id:3,imgURL: require('../assets/img/index/huiwu/dema.jpg'), caseTitle: '英雄联盟-德玛西亚杯',caseContent:'电竞标准场景搭建'},
                         ]
                     },
                     {
                         title: '庆典',
                         sortList: ['开业', '乔迁', '婚庆', '周年庆', '节日'],
                         detail: [
-                            {id:4,imgURL: require('../assets/img/index/qingdian/meikemeijia.jpg'), caseTitle: '美克美家开业典礼',caseContent:'美克美家一直以高端大气的形象出现，开业典礼以白色、灰色、黑色等为主色调突出其高贵的品牌定位。'},
+                            {id:4,imgURL: require('../assets/img/index/qingdian/meikemeijia.jpg'), caseTitle: '美克美家成都旗舰店开业典礼',caseContent:'美克美家一直以高端大气的形象出现，开业典礼以白色、灰色、黑色等为主色调突出其高贵的品牌定位。'},
                             {id:5,imgURL: require('../assets/img/index/qingdian/year.jpg'), caseTitle: 'CAWD（中国仓储与配送协会）答谢晚宴',caseContent:'以红色金色作为答谢会主题，烘托喜庆感恩氛围'},
                             {id:6,imgURL: require('../assets/img/index/qingdian/zhongshihunli.jpg'), caseTitle: '中式婚礼',caseContent:'本场婚礼为中式主题婚礼，中国元素即为本次活动亮点'},
                         ]
@@ -216,18 +216,18 @@
                         title: '展示展览',
                         sortList: ['糖酒会', '房交会', '车展', '人才交流会'],
                         detail: [
-                            {id:7,imgURL: require('../assets/img/index/zszl/xinhua.png'), caseTitle: '新华三展示区',caseContent:'几何形构造出简洁大气的展示环境，屏幕的摆放方式和摆放位置都体现出高端科技的质感'},
-                            {id:8,imgURL: require('../assets/img/index/zszl/tjhwc.jpg'), caseTitle: '糖酒会外场',caseContent:'使用大的logo品牌展示墙，简单直接的传达企业文化'},
-                            {id:9,imgURL: require('../assets/img/index/zszl/tjhnc.png'), caseTitle: '糖酒会内场',caseContent:'鲜明的黄色与啤酒搭配，展现出活力、激情和个性'},
+                            {id:7,imgURL: require('../assets/img/index/zszl/xinhua.png'), caseTitle: '新华三2018年经销商会',caseContent:'几何形构造出简洁大气的展示环境，屏幕的摆放方式和摆放位置都体现出高端科技的质感'},
+                            {id:8,imgURL: require('../assets/img/index/zszl/tjhwc.jpg'), caseTitle: '糖酒会--外场',caseContent:'使用大的logo品牌展示墙，简单直接的传达企业文化'},
+                            {id:9,imgURL: require('../assets/img/index/zszl/tjhnc.png'), caseTitle: '糖酒会-啤酒展区',caseContent:'鲜明的黄色与啤酒搭配，展现出活力、激情和个性'},
                         ]
                     },
                     {
                         title: '派对',
                         sortList: ['生日宴', '宝宝宴', '朋友聚会', '时尚轰趴'],
                         detail: [
-                            {id:10,imgURL: require('../assets/img/index/party/baobao.jpeg'), caseTitle: '粉色梦幻宝宝宴',caseContent:'本场活动营造的是小女孩粉色梦幻的生日派对。'},
-                            {id:11,imgURL: require('../assets/img/index/party/haiyang.jpg'), caseTitle: '海洋主题宝宝宴',caseContent:'本场活动是以海洋元素为设计素材，营造出一场蓝色海洋主题生日派对'},
-                            {id:12,imgURL: require('../assets/img/index/party/heijin.jpg'), caseTitle: '黑金饭盒主题轰趴',caseContent:'黑色和金色都是高贵经典的颜色，两种颜色的搭配打造出一场高贵又冷艳的个性风格的聚会'},
+                            {id:10,imgURL: require('../assets/img/index/party/baobao.jpeg'), caseTitle: '宝宝宴—粉色梦幻主题',caseContent:'本场活动营造的是小女孩粉色梦幻的生日派对。'},
+                            {id:11,imgURL: require('../assets/img/index/party/haiyang.jpg'), caseTitle: '宝宝宴—海洋主题',caseContent:'本场活动是以海洋元素为设计素材，营造出一场蓝色海洋主题生日派对'},
+                            {id:12,imgURL: require('../assets/img/index/party/heijin.jpg'), caseTitle: '主题轰趴--黑金凡盒',caseContent:'黑色和金色都是高贵经典的颜色，两种颜色的搭配打造出一场高贵又冷艳的个性风格的聚会'},
                         ]
                     }
                 ],

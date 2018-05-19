@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',"Microsoft YaHei","微软雅黑", Arial, sans-serif
 }
 ul {
     margin: auto;
@@ -301,7 +302,6 @@ a {
             margin: auto;
             color: #333;
             font-weight: 500;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
         }
         p {
             line-height: 20px;
@@ -386,15 +386,19 @@ a {
 
 /*关于我们*/
 .about-us {
+    img {
+        width: 320px;
+        height: 360px;
+        // border-radius: 50%;
+    }
     p {
         line-height: 28px;
         color: #666;
         font-size: 14px;
-        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
         text-indent: 2em;
     }
     .team {
-        width: 1100px;
+        width: 1110px;
         margin: auto;
         padding: 40px 0;
         h3, h6 {
@@ -405,6 +409,7 @@ a {
             padding-left: 100px;
         }
         h6 {
+            margin: 0;
             font-size: 18px;
         }
     }
@@ -423,6 +428,7 @@ a {
                 padding-right: 110px;
             }
             h5 {
+                margin: 0;
                 font-size: 18px;
             }
             img {
