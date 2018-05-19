@@ -12,6 +12,8 @@
 
 <style>
     body {
+        width: 100%;
+        min-width: 1200px;
         margin: 0;
         padding: 0;
     }
