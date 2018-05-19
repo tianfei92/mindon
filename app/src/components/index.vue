@@ -225,7 +225,7 @@
                         title: '派对',
                         sortList: ['生日宴', '宝宝宴', '朋友聚会', '时尚轰趴'],
                         detail: [
-                            {id:10,imgURL: require('../assets/img/index/party/baobao.jpeg'), caseTitle: '宝宝宴—粉色梦幻主题',caseContent:'本场活动营造的是小女孩粉色梦幻的生日派对。'},
+                            {id:10,imgURL: require('../assets/img/index/party/baobao.jpg'), caseTitle: '宝宝宴—粉色梦幻主题',caseContent:'本场活动营造的是小女孩粉色梦幻的生日派对。'},
                             {id:11,imgURL: require('../assets/img/index/party/haiyang.jpg'), caseTitle: '宝宝宴—海洋主题',caseContent:'本场活动是以海洋元素为设计素材，营造出一场蓝色海洋主题生日派对'},
                             {id:12,imgURL: require('../assets/img/index/party/heijin.jpg'), caseTitle: '主题轰趴--黑金凡盒',caseContent:'黑色和金色都是高贵经典的颜色，两种颜色的搭配打造出一场高贵又冷艳的个性风格的聚会'},
                         ]
