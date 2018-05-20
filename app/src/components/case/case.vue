@@ -103,6 +103,11 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.el-menu-item a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+}
 #m-case-detail {
   padding-top: 60px;
 }
