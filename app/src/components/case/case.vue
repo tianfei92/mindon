@@ -16,8 +16,8 @@
               <el-menu-item index="2"><router-link to="/case/detail">经典案例</router-link></el-menu-item>
               <el-submenu index="6">
                 <template slot="title">曼.成员</template>
-                <el-menu-item index="6-1">六十度餐饮</el-menu-item>
-                <el-menu-item index="6-2">墨饰居</el-menu-item>
+                <el-menu-item index="6-1"><a target="_blank" href="http://www.ok60du.com/">六十度餐饮</a></el-menu-item>
+                <el-menu-item index="6-2"><a target="_blank" href="http://www.moshiju.com/">墨饰居</a></el-menu-item>
               </el-submenu>
             </el-menu>
           </div>
