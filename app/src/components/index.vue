@@ -17,11 +17,11 @@
                         <el-menu-item index="3" @click="scrollTo('#m-device')">舞美音响</el-menu-item>
                         <el-menu-item index="4" @click="scrollTo('#m-photography')">摄影摄像</el-menu-item>
                         <el-menu-item index="5" @click="scrollTo('#m-model')">模特礼仪</el-menu-item>
-                        <el-submenu index="6">
+                        <!-- <el-submenu index="6">
                             <template slot="title">曼.成员</template>
                             <el-menu-item index="6-1"><a target="_blank" href="http://www.ok60du.com/">六十度餐饮</a></el-menu-item>
                             <el-menu-item index="6-2"><a target="_blank" href="http://www.moshiju.com/">墨饰居</a></el-menu-item>
-                        </el-submenu>
+                        </el-submenu> -->
                         <el-menu-item index="7" @click="scrollTo('#m-about-us')">关于我们</el-menu-item>
                     </el-menu>
                 </div>
@@ -157,7 +157,7 @@
                         <img src="../assets/img/index/about/about_img1.jpg" alt="">
                     </el-col>
                     <el-col :span="16">
-                        <p>Mindon曼·策划，独立于六十度餐饮策划部。随着市场需求连年增长，六十度业务不断发展，对于高端策划的需求越发强烈，策划部已经不能满足对于高品质策划的需求，2017年，创始人团队联合六十度以合伙制形式，组建全新策划品牌Mindon曼·策划，团队拥有10年的大型活动策划执行经验，同时也吸纳了高素质年轻一代策划师，定位于各类高端活动策划。团队整体策划水平，创新意识深受精英客户群好评</p>
+                        <p>成都曼同文化传播有限公司旗下品牌Mindon曼·策划，随着活动策划市场需求连年增长，市场对于高端策划的需求越发强烈，2017年，创始人团队以合伙制形式，组建策划品牌Mindon曼·策划，团队成员拥有10年的大型活动策划执行经验，同时也吸纳了高素质年轻一代策划师，定位于各类高端活动策划。团队整体策划水平，创新意识深受精英客户群好评。</p>
                         <p>Mindon意于精神粒子，心灵感应粒子。我们期望倾听客户的声音，能与客户心有灵犀。用心去营造合适的氛围，让产品拥有厚度，拥有震撼人心的力量，完美的体验是我们不懈的追求。</p>
                         <p>我们坚信自由、平等、开放、人性化的工作环境是创造力的源泉。热爱所以执著，我们期望我们所有的伙伴，享受创造快乐幸福的过程。</p>
                     </el-col>
