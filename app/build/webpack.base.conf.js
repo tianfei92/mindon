@@ -41,7 +41,6 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        query: {presets: ['es2105']},
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')],
         exclude: /node_modules/
       },
