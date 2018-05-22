@@ -7,7 +7,7 @@ import admin from '@/components/admin/admin'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'hash',
+  // mode: 'hash',
   routes: [
     {
       path: '/',
