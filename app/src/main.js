@@ -7,6 +7,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import ElementUI from 'element-ui'
 import $ from 'jquery'
 import mock from './plugins/mock'
+import 'babel-polyfill'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
