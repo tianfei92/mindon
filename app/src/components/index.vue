@@ -173,8 +173,6 @@
     </div>
 </template>
 <script>
-    import Swiper from 'swiper'
-    import 'swiper/dist/css/swiper.min.css';
     import mFooterVue from './m-footer';
     // import footerfixed from './m-footer-fixed';
     import navRight from './nav-right'
@@ -263,22 +261,7 @@
                 ]
             }
         },
-        mounted() {
-            this.initSwiper();
-        },
         methods: {
-            //首屏轮播
-            initSwiper: function () {
-                let mySwiper = new Swiper ('.swiper-container', {
-                    direction: 'horizontal',
-                    loop: true,
-                    autoplay: true,
-                    // 如果需要分页器
-                    pagination: {
-                        el: '.swiper-pagination',
-                    }
-                });
-            },
             handleSelect: function(index, indexPath) {
                 this.deviceShowIndex = Number(index.split('-')[1])
             },
