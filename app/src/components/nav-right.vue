@@ -2,7 +2,7 @@
     <!--QQ、二维码导航-->
     <div class="contact-nav">
         <div class="nav">
-            <a href="javascript: void(0)" class="phone"></a>
+            <a href="tel:18008091258" class="phone"></a>
             <span>电话：180-0809-1258</span>
         </div>
         <div class="nav">
@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="nav">
-            <a href="javascript: void(0)" class="QQ"></a>
+            <a href="https://wpa.qq.com/msgrd?v=3&uin=1137333869&site=qq&menu=yes" class="QQ" target="_blank"></a>
             <span>QQ：1137333869</span>
         </div>
         <div class="nav no-need">
