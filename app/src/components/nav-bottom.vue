@@ -9,7 +9,7 @@
 </template>
 <script>
 export default {
-    name: 'nav',
+    name: 'nav-bottom',
     methods: {
         scrollTo: function() {
             $('html,body').animate({scrollTop: -60}, 800)
