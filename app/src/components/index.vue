@@ -169,20 +169,29 @@
 
         <!-- <footerfixed></footerfixed> -->
 
-        <nav-right></nav-right>
+        <nav-right v-if="!isMobile"></nav-right>
+        
+        <nav-bottom v-if="isMobile"></nav-bottom>
     </div>
 </template>
 <script>
     import mFooterVue from './m-footer';
     // import footerfixed from './m-footer-fixed';
     import navRight from './nav-right'
+    import navBottom from './nav-bottom'
 
     export default {
+        name: 'index',
+        created() {
+            let deviceAgent = navigator.userAgent.toLowerCase();
+            this.isMobile = deviceAgent.match(/(iphone|ipod|ipad|android)/) ? true : false;
+        },
         components: {
-            mFooterVue,navRight
+            mFooterVue,navRight,navBottom
         },
         data: function () {
             return {
+                isMobile: false,
                 activeIndex: '1',
                 deviceShowIndex: 0,
                 bannerList: [

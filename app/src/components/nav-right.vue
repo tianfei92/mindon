@@ -2,7 +2,7 @@
     <!--QQ、二维码导航-->
     <div class="contact-nav">
         <div class="nav">
-            <a href="tel:18008091258" class="phone"></a>
+            <a href="javascript: void(0)" class="phone"></a>
             <span>电话：180-0809-1258</span>
         </div>
         <div class="nav">
@@ -23,6 +23,7 @@
 </template>
 <script>
 export default {
+    name: 'nav',
     methods: {
         scrollTo: function() {
             $('html,body').animate({scrollTop: -60}, 800)
