@@ -3,7 +3,7 @@
     <div class="contact-nav">
         <a href="tel:18008091258" class="phone"></a>
         <a href="sms:18008091258" class="WeChat"></a>
-        <a href="http://wpa.qq.com/msgrd?v=3&uin=1137333869&site=qq&menu=yes" class="QQ" target="_blank"></a>
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=286535774&site=qq&menu=yes" class="QQ" target="_blank"></a>
         <a href="javascript: void(0)" class="back-top" @click="scrollTo"></a>
     </div>  
 </template>

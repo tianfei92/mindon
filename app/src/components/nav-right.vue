@@ -13,8 +13,8 @@
             </div>
         </div>
         <div class="nav">
-            <a href="https://wpa.qq.com/msgrd?v=3&uin=1137333869&site=qq&menu=yes" class="QQ" target="_blank"></a>
-            <span>QQ：1137333869</span>
+            <a href="https://wpa.qq.com/msgrd?v=3&uin=286535774&site=qq&menu=yes" class="QQ" target="_blank"></a>
+            <span>QQ：286535774</span>
         </div>
         <div class="nav no-need">
             <a href="javascript: void(0)" class="back-top" @click="scrollTo"></a>
