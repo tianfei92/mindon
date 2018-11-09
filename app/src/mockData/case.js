@@ -89,7 +89,11 @@ let case_5 = {
         require('../assets/img/case/case_5/2.jpg'),
         require('../assets/img/case/case_5/3.jpg'),
         require('../assets/img/case/case_5/4.jpg'),
-        require('../assets/img/case/case_5/5.jpg')
+        require('../assets/img/case/case_5/5.jpg'),
+        require('../assets/img/case/case_5/6.jpg'),
+        require('../assets/img/case/case_5/7.jpg'),
+        require('../assets/img/case/case_5/8.jpg'),
+        require('../assets/img/case/case_5/9.jpg'),
     ],
     caseDetailInfo: {
         title: '超有爱的六周岁',
