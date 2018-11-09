@@ -46,6 +46,7 @@
           <li>嘉宾<span>{{caseDetailInfo.peopleNumbers}}人</span></li>
           <li>场地<span>{{caseDetailInfo.address}}</span></li>
           <li>时间<span>{{caseDetailInfo.theme}}</span></li>
+          <li v-if="caseDetailInfo.keyWords">关键词<span>{{caseDetailInfo.keyWords}}</span></li>
         </ul>
       </div>
     </div>

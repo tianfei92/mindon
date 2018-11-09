@@ -215,7 +215,7 @@
                         sortList: ['开业', '乔迁', '婚庆', '周年庆', '节日'],
                         detail: [
                             {id:4,imgURL: require('../assets/img/index/qingdian/meikemeijia.jpg'), caseTitle: '美克美家成都旗舰店开业典礼',caseContent:'美克美家一直以高端大气的形象出现，开业典礼以白色、灰色、黑色等为主色调突出其高贵的品牌定位。'},
-                            {id:5,imgURL: require('../assets/img/index/qingdian/year.jpg'), caseTitle: 'CAWD（中国仓储与配送协会）答谢晚宴',caseContent:'以红色金色作为答谢会主题，烘托喜庆感恩氛围'},
+                            {id:5,imgURL: require('../assets/img/index/qingdian/cya.jpg'), caseTitle: '超有爱六周年庆典',caseContent:'高端晚宴与酒会相结合的年会庆典，结合超有爱的设计风格，营造高贵、温馨的氛围。'},
                             {id:6,imgURL: require('../assets/img/index/qingdian/zhongshihunli.jpg'), caseTitle: '中式婚礼',caseContent:'本场婚礼为中式主题婚礼，中国元素即为本次活动亮点'},
                         ]
                     },
