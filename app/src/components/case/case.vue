@@ -43,10 +43,10 @@
         <p>{{caseDetailInfo.inspiration}}</p>
         <h3>基本信息</h3>
         <ul>
-          <li>嘉宾<span>{{caseDetailInfo.peopleNumbers}}人</span></li>
-          <li>场地<span>{{caseDetailInfo.address}}</span></li>
-          <li>时间<span>{{caseDetailInfo.theme}}</span></li>
-          <li v-if="caseDetailInfo.keyWords">关键词<span>{{caseDetailInfo.keyWords}}</span></li>
+          <li><span>嘉&nbsp;&nbsp;&nbsp;&nbsp;宾</span>{{caseDetailInfo.peopleNumbers}}人</li>
+          <li><span>场&nbsp;&nbsp;&nbsp;&nbsp;地</span>{{caseDetailInfo.address}}</li>
+          <li><span>时&nbsp;&nbsp;&nbsp;&nbsp;间</span>{{caseDetailInfo.theme}}</li>
+          <li v-if="caseDetailInfo.keyWords"><span>关键词</span>{{caseDetailInfo.keyWords}}</li>
         </ul>
       </div>
     </div>
@@ -231,10 +231,12 @@ export default {
         width: 100%;
         margin-bottom: 8px;
         zoom: 1;
-        color: #999999;
+        color: #4a4a4a;
         span {
-          margin-left: 20px;
-          color: #4a4a4a;
+          display: inline-block;
+          width: 50px;
+          margin-right: 20px;
+          color: #999999;
         }
       }
     }
