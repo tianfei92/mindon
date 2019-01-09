@@ -5,7 +5,7 @@
 </template>
 
 <script>
-var _hmt = _hmt || [];
+    var _hmt = _hmt || [];
     (function() {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?e4bf056f678007efe2671f0a3e17c847";
