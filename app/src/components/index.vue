@@ -144,7 +144,7 @@
                             <p>我们的团队，有从业10年以上伙伴，有刚刚毕业的大学同学，活力、创新、经验三者相互碰撞在我们中间产生了有趣的火花。我们共同的目标是用高于行业的标准来呈现仪式（活动）。</p>
                         </el-col>
                         <el-col :span="8">
-                            <img src="../assets/img/index/about/about_img2.jpg" alt="">
+                            <img src="../assets/img/index/about/about_img2.png" alt="">
                         </el-col>
                     </el-row>
                 </div>
@@ -154,7 +154,7 @@
                 <h6>About us</h6>
                 <el-row>
                     <el-col :span="8">
-                        <img src="../assets/img/index/about/about_img1.jpg" alt="">
+                        <img src="../assets/img/index/about/about_img1.png" alt="">
                     </el-col>
                     <el-col :span="16">
                         <p>成都曼同文化传播有限公司旗下品牌Mindon曼·策划，随着活动策划市场需求连年增长，市场对于高端策划的需求越发强烈，2017年，创始人团队以合伙制形式，组建策划品牌Mindon曼·策划，团队成员拥有10年的大型活动策划执行经验，同时也吸纳了高素质年轻一代策划师，定位于各类高端活动策划。团队整体策划水平，创新意识深受精英客户群好评。</p>
@@ -212,20 +212,11 @@
                     },
                     {
                         title: '庆典',
-                        sortList: ['开业', '乔迁', '婚庆', '周年庆', '节日'],
+                        sortList: ['开业', '乔迁', '周年庆', '节日'],
                         detail: [
                             {id:4,imgURL: require('../assets/img/index/qingdian/meikemeijia.jpg'), caseTitle: '美克美家成都旗舰店开业典礼',caseContent:'美克美家一直以高端大气的形象出现，开业典礼以白色、灰色、黑色等为主色调突出其高贵的品牌定位。'},
                             {id:5,imgURL: require('../assets/img/index/qingdian/cya.jpg'), caseTitle: '超有爱六周年庆典',caseContent:'高端晚宴与酒会相结合的年会庆典，结合超有爱的设计风格，营造高贵、温馨的氛围。'},
-                            {id:6,imgURL: require('../assets/img/index/qingdian/zhongshihunli.jpg'), caseTitle: '中式婚礼',caseContent:'本场婚礼为中式主题婚礼，中国元素即为本次活动亮点'},
-                        ]
-                    },
-                    {
-                        title: '展示展览',
-                        sortList: ['糖酒会', '房交会', '车展', '人才交流会'],
-                        detail: [
-                            {id:7,imgURL: require('../assets/img/index/zszl/xinhua.png'), caseTitle: '新华三2018年经销商会',caseContent:'几何形构造出简洁大气的展示环境，屏幕的摆放方式和摆放位置都体现出高端科技的质感'},
-                            {id:8,imgURL: require('../assets/img/index/zszl/tjhwc.jpg'), caseTitle: '糖酒会--外场',caseContent:'使用大的logo品牌展示墙，简单直接的传达企业文化'},
-                            {id:9,imgURL: require('../assets/img/index/zszl/tjhnc.png'), caseTitle: '糖酒会-啤酒展区',caseContent:'鲜明的黄色与啤酒搭配，展现出活力、激情和个性'},
+                            {id:6,imgURL: require('../assets/img/index/qingdian/sanxingdui.jpg'), caseTitle: '三星堆国际飞行音乐节',caseContent:'现代科技与三星堆文明巧妙融合，包含了多种音乐风格，集合了创意集市与美食餐饮，一场现代文明与古蜀文明结合的音乐盛宴。'},
                         ]
                     },
                     {
@@ -234,18 +225,26 @@
                         detail: [
                             {id:10,imgURL: require('../assets/img/index/party/baobao.jpg'), caseTitle: '宝宝宴—粉色梦幻主题',caseContent:'本场活动营造的是小女孩粉色梦幻的生日派对。'},
                             {id:11,imgURL: require('../assets/img/index/party/haiyang.jpg'), caseTitle: '宝宝宴—海洋主题',caseContent:'本场活动是以海洋元素为设计素材，营造出一场蓝色海洋主题生日派对'},
-                            {id:12,imgURL: require('../assets/img/index/party/heijin.jpg'), caseTitle: '主题轰趴--黑金凡盒',caseContent:'黑色和金色都是高贵经典的颜色，两种颜色的搭配打造出一场高贵又冷艳的个性风格的聚会'},
                         ]
-                    }
+                    },
+                    {
+                        title: '暖场活动',
+                        sortList: ['楼盘暖场', '商场美陈', '企业家庭日'],
+                        detail: [
+                            {id:7,imgURL: require('../assets/img/index/zszl/fulicheng.jpg'), caseTitle: '富利新城揭幕仪式',caseContent:'一场传统红火风格的楼盘揭幕仪式，喜庆隆重、红红火火。'},
+                            {id:12,imgURL: require('../assets/img/index/party/heijin.jpg'), caseTitle: '主题轰趴--黑金凡盒',caseContent:'黑色和金色都是高贵经典的颜色，两种颜色的搭配打造出一场高贵又冷艳的个性风格的聚会'},
+                            {id:9,imgURL: require('../assets/img/index/zszl/meichen.jpg'), caseTitle: '美陈—粉色圣诞',caseContent:'本活动以粉色为主色 调，打造网红美陈，嗨爆粉色 圣诞。'},
+                        ]
+                    },
                 ],
                 deviceSortList: [
                     [
-                        {imgURL: require('../assets/img/index/device/d_1.jpg'), title: '光束灯'},
-                        {imgURL: require('../assets/img/index/device/d_2.jpg'), title: '影视面光灯'},
-                        {imgURL: require('../assets/img/index/device/d_3.jpg'), title: '2500W机械追光灯'},
-                        {imgURL: require('../assets/img/index/device/d_4.jpg'), title: '成像灯'},
-                        {imgURL: require('../assets/img/index/device/d_5.jpg'), title: '车展灯'},
-                        {imgURL: require('../assets/img/index/device/d_6.jpg'), title: '追光灯'},
+                        {imgURL: require('../assets/img/index/device/d_1.png'), title: '光束灯'},
+                        {imgURL: require('../assets/img/index/device/d_2.png'), title: '影视面光灯'},
+                        {imgURL: require('../assets/img/index/device/d_3.png'), title: '2500W机械追光灯'},
+                        {imgURL: require('../assets/img/index/device/d_4.png'), title: '成像灯'},
+                        {imgURL: require('../assets/img/index/device/d_5.png'), title: '车展灯'},
+                        {imgURL: require('../assets/img/index/device/d_6.png'), title: '追光灯'},
                     ],
                     [
                         {imgURL: require('../assets/img/index/device/y_1.jpg'), title: 'JBL'},

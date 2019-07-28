@@ -112,21 +112,13 @@ let case_6 = {
         require('../assets/img/case/case_6/3.jpg'),
         require('../assets/img/case/case_6/4.jpg'),
         require('../assets/img/case/case_6/5.jpg'),
-        require('../assets/img/case/case_6/6.jpg'),
-        require('../assets/img/case/case_6/7.jpg'),
-        require('../assets/img/case/case_6/8.jpg'),
-        require('../assets/img/case/case_6/9.jpg'),
-        require('../assets/img/case/case_6/10.jpg'),
-        require('../assets/img/case/case_6/11.jpg'),
-        require('../assets/img/case/case_6/12.jpg'),
-        require('../assets/img/case/case_6/13.jpg')
     ],
     caseDetailInfo: {
-        title: '中式婚礼',
-        inspiration: '中式婚礼越来越受到年轻人群的喜爱，中国元素的加入，让热爱中国文化的新人，有机会去体验传统中国文化，感受古代中国特有的仪式感。新人通过中式婚礼，传达自己对中国文化的热爱。',
-        peopleNumbers: '300',
-        address: '成都',
-        theme: '2017年'
+        title: '三星堆音乐节',
+        inspiration: '三星堆国际飞行音乐节以“航空航天”、“三星堆古蜀文明”两大元素为主题，将音乐艺术与科技美学巧妙融合，面具狂欢夜取用了三星堆古文明元素，使古文明展现我们眼前。',
+        peopleNumbers: '3000',
+        address: '四川广汉',
+        theme: '2017年9月29日 -  10月3日'
     }
 }
 
@@ -135,14 +127,19 @@ let case_7 = {
         require('../assets/img/case/case_7/1.jpg'),
         require('../assets/img/case/case_7/2.jpg'),
         require('../assets/img/case/case_7/3.jpg'),
-        require('../assets/img/case/case_7/4.jpg')
+        require('../assets/img/case/case_7/4.jpg'),
+        require('../assets/img/case/case_7/5.jpg'),
+        require('../assets/img/case/case_7/6.jpg'),
+        require('../assets/img/case/case_7/7.jpg'),
+        require('../assets/img/case/case_7/8.jpg'),
+        require('../assets/img/case/case_7/9.jpg'),
     ],
     caseDetailInfo: {
-        title: '新华三2018年经销商会',
-        inspiration: '近些年高端科技品牌，简洁富有设计感的作品深受其喜爱。用几何形构造出简洁大气的展示环境，用屏幕的摆放方式和摆放位置来烘托高端科技的质感',
-        peopleNumbers: '7500',
-        address: '成都',
-        theme: '2018年3月30日'
+        title: '富力新城揭幕仪式',
+        inspiration: '富利新城楼盘采用古典、雅致、 新颖、独特的新中式建筑风格， 在揭幕仪式中融入了鼓舞，舞狮 等中式元素，使活动氛围与其建 筑风格相融合并且碰撞出不一样 的火花',
+        peopleNumbers: '200',
+        address: '彭山富力新城售楼部',
+        theme: '2018年11月15日'
     }
 }
 
@@ -171,14 +168,16 @@ let case_9 = {
         require('../assets/img/case/case_9/3.jpg'),
         require('../assets/img/case/case_9/4.jpg'),
         require('../assets/img/case/case_9/5.jpg'),
-        require('../assets/img/case/case_9/6.jpg')
+        require('../assets/img/case/case_9/6.jpg'),
+        require('../assets/img/case/case_9/7.jpg'),
+        require('../assets/img/case/case_9/8.jpg'),
     ],
     caseDetailInfo: {
-        title: '糖酒会-啤酒展区',
-        inspiration: '用与啤酒相关联的黄色，与啤酒品牌作为呼应。黄色代表激情、向上。案例中使用一定的对比色，突显出啤酒主题。在展台设计中，用吧台式的设计，让客户，更能还原饮用啤酒的场景，以达到更好的体验。啤酒堆台的应用，很好的烘托了现场热闹的氛围。',
-        peopleNumbers: '10000+',
-        address: '成都',
-        theme: '2018年3月'
+        title: '成都富力广场圣诞节美陈',
+        inspiration: '以爆红刷屏捏脸工具 ZEPETO 为 灵感，打造的网红美陈，迎接圣 诞节到来。本次活动以粉儿萌& 圣诞为主题，粉色为主色调，打 造粉色梦幻地标。嗨爆粉色圣诞， 收割你的少女心。',
+        peopleNumbers: '20000',
+        address: '成都富力广场',
+        theme: '2018年12月07日'
     }
 }
 

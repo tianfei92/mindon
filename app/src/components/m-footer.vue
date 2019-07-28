@@ -12,7 +12,7 @@
                 <p class="tel-num">客服电话：180-0809-1258</p>
                 <p class="email">商务合作：<a href="mailto:286535774@qq.com">286535774@qq.com</a></p>
                 <p class="address">地址一：成都市光华村街2号天祥广场1栋2单元1705</p>
-                <p class="address">地址二：四川成都武侯区锦绣路1号附24号</p>
+                <p class="address">地址二：四川成都武侯区高攀路2号魏玛国际广场1829</p>
                 <p>服务时间：周一至周日 10:00-19:00</p>
             </div>
         </div>
