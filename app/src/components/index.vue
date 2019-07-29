@@ -220,20 +220,12 @@
                         ]
                     },
                     {
-                        title: '派对',
-                        sortList: ['生日宴', '宝宝宴', '朋友聚会', '时尚轰趴'],
-                        detail: [
-                            {id:10,imgURL: require('../assets/img/index/party/baobao.jpg'), caseTitle: '宝宝宴—粉色梦幻主题',caseContent:'本场活动营造的是小女孩粉色梦幻的生日派对。'},
-                            {id:11,imgURL: require('../assets/img/index/party/haiyang.jpg'), caseTitle: '宝宝宴—海洋主题',caseContent:'本场活动是以海洋元素为设计素材，营造出一场蓝色海洋主题生日派对'},
-                        ]
-                    },
-                    {
                         title: '暖场活动',
                         sortList: ['楼盘暖场', '商场美陈', '企业家庭日'],
                         detail: [
                             {id:7,imgURL: require('../assets/img/index/zszl/fulicheng.jpg'), caseTitle: '富利新城揭幕仪式',caseContent:'一场传统红火风格的楼盘揭幕仪式，喜庆隆重、红红火火。'},
-                            {id:12,imgURL: require('../assets/img/index/party/heijin.jpg'), caseTitle: '主题轰趴--黑金凡盒',caseContent:'黑色和金色都是高贵经典的颜色，两种颜色的搭配打造出一场高贵又冷艳的个性风格的聚会'},
                             {id:9,imgURL: require('../assets/img/index/zszl/meichen.jpg'), caseTitle: '美陈—粉色圣诞',caseContent:'本活动以粉色为主色 调，打造网红美陈，嗨爆粉色 圣诞。'},
+                            {id:12,imgURL: require('../assets/img/index/party/heijin.jpg'), caseTitle: '主题轰趴--黑金凡盒',caseContent:'黑色和金色都是高贵经典的颜色，两种颜色的搭配打造出一场高贵又冷艳的个性风格的聚会'},
                         ]
                     },
                 ],
