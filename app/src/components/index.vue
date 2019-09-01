@@ -49,7 +49,7 @@
         <!--案例-->
         <div class="mindon-index-case" id="m-case">
             <div class="floorhd"><div class="grid_c1 floorhd_inner"><h3 class="floorhd_tit">经典案例</h3></div></div>
-            <div class="case-box" v-for="(caseInfo, index) in caseList" :class="{odd: index%2 != 0}" :key="index">
+            <div class="case-box" v-for="(caseInfo, index) in caseList" :class="{odd: index%2 !== 0}" :key="index">
                 <div class="case-list">
                     <h5>{{caseInfo.title}}</h5>
                     <ul class="sort-list">
@@ -122,11 +122,16 @@
             <div class="tips"><p>我公司提供国内A级模特礼仪，国内男模女模、外籍模特、外籍乐队，以下图片是部分我公司演出资源，更多资源请电话联系。</p></div>
             <div class="list">
                 <el-row :gutter="20">
-                    <el-col :span="6"><div class="grid-content"><img src="../assets/img/index/model/model_1.png" alt=""><p>国内女模</p></div></el-col>
-                    <el-col :span="6"><div class="grid-content"><img src="../assets/img/index/model/model_2.png" alt=""><p>外籍女模</p></div></el-col>
-                    <el-col :span="6"><div class="grid-content"><img src="../assets/img/index/model/model_3.png" alt=""><p>国内男模</p></div></el-col>
-                    <el-col :span="6"><div class="grid-content"><img src="../assets/img/index/model/model_4.png" alt=""><p>外籍乐队</p></div></el-col>
+                    <el-col :span="6"><div class="grid-content"><img src="../assets/img/index/model/gd_1.png" alt=""><p>国内女模</p></div></el-col>
+                    <el-col :span="6"><div class="grid-content"><img src="../assets/img/index/model/gd_2.png" alt=""><p>外籍女模</p></div></el-col>
+                    <el-col :span="6"><div class="grid-content"><img src="../assets/img/index/model/gd_3.png" alt=""><p>国内男模</p></div></el-col>
+                    <el-col :span="6"><div class="grid-content"><img src="../assets/img/index/model/gd_4.png" alt=""><p>外籍乐队</p></div></el-col>
                 </el-row>
+                <!-- <el-carousel :interval="4000" type="card" height="200px">
+                    <el-carousel-item v-for="model in modelList" :key="model.id">
+                        <img :src="model.imgURL" alt="">
+                    </el-carousel-item>
+                </el-carousel> -->
             </div>
         </div>
 
@@ -228,6 +233,15 @@
                             {id:12,imgURL: require('../assets/img/index/party/heijin.jpg'), caseTitle: '主题轰趴--黑金凡盒',caseContent:'黑色和金色都是高贵经典的颜色，两种颜色的搭配打造出一场高贵又冷艳的个性风格的聚会'},
                         ]
                     },
+                    {
+                        title: '展示展览',
+                        sortList: ['糖酒会', '房交会', '车展', '人才交流会'],
+                        detail: [
+                            {id:13,imgURL: require('../assets/img/index/zszl/xinhua.png'), caseTitle: '新华三2018年经销商会',caseContent:'几何形构造出简洁大气的展示环境，屏幕的摆放方式和摆放位置都体现出高端科技的质感'},
+                            {id:8,imgURL: require('../assets/img/index/zszl/tjhwc.jpg'), caseTitle: '糖酒会--外场',caseContent:'使用大的logo品牌展示墙，简单直接的传达企业文化'},
+                            {id:14,imgURL: require('../assets/img/index/zszl/tjhnc.png'), caseTitle: '糖酒会-啤酒展区',caseContent:'鲜明的黄色与啤酒搭配，展现出活力、激情和个性'},
+                        ]
+                    },
                 ],
                 deviceSortList: [
                     [
@@ -258,6 +272,13 @@
                         {imgURL: require('../assets/img/index/device/t_4.jpg'), title: '专业视频切换台'},
                         {imgURL: require('../assets/img/index/device/t_5.jpg'), title: 'MA调光台'},
                     ]
+                ],
+                modelList: [
+                    {id: 1, imgURL: require('../assets/img/index/model/model_1.png')},
+                    {id: 2, imgURL: require('../assets/img/index/model/model_2.png')},
+                    {id: 3, imgURL: require('../assets/img/index/model/model_3.png')},
+                    {id: 4, imgURL: require('../assets/img/index/model/model_4.png')},
+                    {id: 5, imgURL: require('../assets/img/index/model/model_5.png')},
                 ]
             }
         },

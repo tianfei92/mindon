@@ -240,6 +240,41 @@ let case_12 = {
         theme: '2018年4月'
     }
 }
+
+let case_13 = {
+    caseImgList: [
+        require('../assets/img/case/case_13/1.jpg'),
+        // require('../assets/img/case/case_7/2.jpg'),
+        require('../assets/img/case/case_13/3.jpg'),
+        require('../assets/img/case/case_13/4.jpg')
+    ],
+    caseDetailInfo: {
+        title: '新华三2018年经销商会',
+        inspiration: '近些年高端科技品牌，简洁富有设计感的作品深受其喜爱。用几何形构造出简洁大气的展示环境，用屏幕的摆放方式和摆放位置来烘托高端科技的质感',
+        peopleNumbers: '7500',
+        address: '成都',
+        theme: '2018年3月30日'
+    }
+}
+
+let case_14 = {
+    caseImgList: [
+        // require('../assets/img/case/case_9/1.jpg'),
+        require('../assets/img/case/case_14/2.jpg'),
+        require('../assets/img/case/case_14/3.jpg'),
+        require('../assets/img/case/case_14/4.jpg'),
+        require('../assets/img/case/case_14/5.jpg'),
+        require('../assets/img/case/case_14/6.jpg')
+    ],
+    caseDetailInfo: {
+        title: '糖酒会-啤酒展区',
+        inspiration: '用与啤酒相关联的黄色，与啤酒品牌作为呼应。黄色代表激情、向上。案例中使用一定的对比色，突显出啤酒主题。在展台设计中，用吧台式的设计，让客户，更能还原饮用啤酒的场景，以达到更好的体验。啤酒堆台的应用，很好的烘托了现场热闹的氛围。',
+        peopleNumbers: '10000+',
+        address: '成都',
+        theme: '2018年3月'
+    }
+}
+
 // exports.case_1 = case_1
 export default {
     case_1: case_1,
@@ -253,5 +288,7 @@ export default {
     case_9: case_9,
     case_10: case_10,
     case_11: case_11,
-    case_12: case_12
+    case_12: case_12,
+    case_13: case_13,
+    case_14: case_14,
 }
